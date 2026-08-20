@@ -1,14 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const HouseTourLogoIcon = ({ className = "w-10 h-10" }) => (
   <img 
-    src="https://lh3.googleusercontent.com/d/1S5ivh1kr8rNsINHt6596mXWo4MX3rC6V" 
+    src="https://lh3.googleusercontent.com/d/1kHEnYjy9jjBdYi3aGZoxntcQQgrHkW2l" 
     alt="HouseTour AI Logo" 
     className={`${className} object-contain`} 
   />
 );
-
-const CameraIcon = HouseTourLogoIcon;
 
 const HomeIcon = ({ className = "w-5 h-5" }) => (
   <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -38,12 +36,6 @@ const SparklesIcon = ({ className = "w-5 h-5" }) => (
 const ChevronRightIcon = ({ className = "w-5 h-5" }) => (
   <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor">
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-  </svg>
-);
-
-const CheckIcon = ({ className = "w-5 h-5" }) => (
-  <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
   </svg>
 );
 
@@ -77,6 +69,12 @@ const UserCheckIcon = ({ className = "w-5 h-5" }) => (
   </svg>
 );
 
+const KeyIcon = ({ className = "w-5 h-5" }) => (
+  <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" />
+  </svg>
+);
+
 export default function App() {
   const [activePortalTab, setActivePortalTab] = useState('upload'); // 'upload' or 'analytics'
   const [activeAudience, setActiveAudience] = useState('renters');
@@ -84,6 +82,17 @@ export default function App() {
   const [waitlistRole, setWaitlistRole] = useState('renter');
   const [emailInput, setEmailInput] = useState('');
   const [isSubmitted, setIsSubmitted] = useState(false);
+
+  // Set website favicon to the official logo
+  useEffect(() => {
+    let link = document.querySelector("link[rel~='icon']");
+    if (!link) {
+      link = document.createElement('link');
+      link.rel = 'icon';
+      document.getElementsByTagName('head')[0].appendChild(link);
+    }
+    link.href = "https://lh3.googleusercontent.com/d/1kHEnYjy9jjBdYi3aGZoxntcQQgrHkW2l";
+  }, []);
 
   // Selected room for Live AI Vision Demo
   const [activeVisionRoom, setActiveVisionRoom] = useState('living-kitchen');
@@ -134,7 +143,7 @@ export default function App() {
   return (
     <div className="min-h-screen bg-[#f5f5f7] text-[#1d1d1f] font-sans antialiased selection:bg-[#0071e3] selection:text-white">
       
-      {/* Header Navigation */}
+      {}
       <header className="sticky top-0 z-50 backdrop-blur-md bg-white/80 border-b border-gray-200/80 transition-all">
         <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
           
@@ -177,7 +186,6 @@ export default function App() {
       </header>
 
       {}
-      {/* 1. Hero Section */}
       <section id="hero-section" className="pt-10 pb-16 px-6 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
@@ -235,7 +243,7 @@ export default function App() {
 
           </div>
 
-          {/* Right Visual Frame (Hero Open Kitchen & Living Interior + Floating Kira Widget) */}
+          {/* Right Visual Frame (Hero Open Living Space + Floating Kira Widget) */}
           <div className="lg:col-span-7 relative">
             <div className="relative rounded-[36px] overflow-hidden border-4 border-white shadow-2xl bg-gray-900 group">
               <img 
@@ -283,7 +291,6 @@ export default function App() {
       </section>
 
       {}
-      {/* 2. Live AI Vision Spatial Demo */}
       <section id="ai-vision-demo" className="py-20 px-6 max-w-7xl mx-auto border-t border-gray-200/80">
         <div className="text-center mb-12">
           <div className="text-xs font-bold uppercase tracking-wider text-[#0071e3] mb-2">Real-Time Vision & Spatial AR</div>
@@ -371,13 +378,12 @@ export default function App() {
       </section>
 
       {}
-      {/* 3. How It Works (Simple 4-Step Access Flow) */}
       <section id="verification-flow" className="py-20 px-6 max-w-7xl mx-auto border-t border-gray-200/80">
         <div className="text-center mb-14">
           <div className="text-xs font-bold uppercase tracking-wider text-[#0071e3] mb-2">Seamless Walkthrough</div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-[#1d1d1f]">Simple. Instant. Hassle-Free.</h2>
           <p className="text-base text-gray-600 max-w-xl mx-auto mt-2">
-            Experience complete freedom to tour empty homes on your own schedule.
+            Experience complete freedom to tour empty homes on your own schedule using simple lockbox key access.
           </p>
         </div>
 
@@ -424,14 +430,17 @@ export default function App() {
               <div className="w-10 h-10 rounded-2xl bg-blue-50 text-[#0071e3] font-extrabold text-base flex items-center justify-center mb-4">3</div>
               <h3 className="font-bold text-base text-[#1d1d1f] mb-1">Access Property</h3>
               <p className="text-xs text-gray-500 leading-relaxed mb-4">
-                Smart access unlatches the door lockbox instantly from your screen.
+                The app reveals the lockbox code to retrieve the key and enter. Works with simple lockboxes or digital keypads.
               </p>
             </div>
             <div className="bg-[#f5f5f7] rounded-2xl p-4 border border-gray-200 text-left space-y-2">
-              <div className="text-[11px] font-bold text-gray-700">Door Lockbox</div>
-              <div className="bg-white p-2.5 rounded-xl border border-gray-200 text-[10px] text-gray-600 flex items-center space-x-2">
-                <LockIcon className="w-4 h-4 text-[#34c759]" />
-                <span>Unlocked</span>
+              <div className="text-[11px] font-bold text-gray-700">Lockbox Key Access</div>
+              <div className="bg-white p-2.5 rounded-xl border border-gray-200 text-[10px] text-gray-600 flex items-center justify-between">
+                <div className="flex items-center space-x-2">
+                  <KeyIcon className="w-4 h-4 text-[#0071e3]" />
+                  <span>Code: <strong>8492</strong></span>
+                </div>
+                <span className="text-[9px] bg-green-100 text-green-700 px-2 py-0.5 rounded-full font-bold">Key Ready</span>
               </div>
             </div>
           </div>
@@ -463,7 +472,6 @@ export default function App() {
       </section>
 
       {}
-      {/* 4. Landlord Studio & Analytics Dashboard */}
       <section id="landlord-portal" className="py-20 px-6 max-w-7xl mx-auto border-t border-gray-200/80">
         <div className="text-center mb-10">
           <div className="text-xs font-bold uppercase tracking-wider text-[#0071e3] mb-2">For Property Owners & Brokers</div>
@@ -499,7 +507,7 @@ export default function App() {
               <div className="flex items-center justify-between border-b pb-4">
                 <div>
                   <h3 className="text-lg font-extrabold text-[#1d1d1f]">Add New Property</h3>
-                  <p className="text-xs text-gray-500">Educate Kira with room dimensions, rent, and rules</p>
+                  <p className="text-xs text-gray-500">Educate Kira with room dimensions, rent, lockbox code, and rules</p>
                 </div>
                 <button className="bg-[#0071e3] text-white text-xs font-bold px-4 py-2 rounded-full">Save & Publish</button>
               </div>
@@ -515,8 +523,12 @@ export default function App() {
                     <input type="text" readOnly value="$3,800 / month" className="w-full text-xs p-3 rounded-xl border border-gray-200 bg-gray-50" />
                   </div>
                   <div>
+                    <label className="block text-xs font-bold text-gray-700 mb-1">Lockbox Access Code</label>
+                    <input type="text" readOnly value="Box Code: 8492 (Front Door Railing)" className="w-full text-xs p-3 rounded-xl border border-gray-200 bg-gray-50 font-mono font-bold text-[#0071e3]" />
+                  </div>
+                  <div>
                     <label className="block text-xs font-bold text-gray-700 mb-1">Description & House Rules</label>
-                    <textarea readOnly rows={3} value="Spacious 2-bedroom vacant flat. Heating included, pets allowed with deposit. Max 3 occupants." className="w-full text-xs p-3 rounded-xl border border-gray-200 bg-gray-50 resize-none"></textarea>
+                    <textarea readOnly rows={2} value="Spacious 2-bedroom vacant flat. Heating included, pets allowed with deposit. Max 3 occupants." className="w-full text-xs p-3 rounded-xl border border-gray-200 bg-gray-50 resize-none"></textarea>
                   </div>
                 </div>
 
@@ -574,7 +586,6 @@ export default function App() {
       </section>
 
       {}
-      {/* 5. Audience Value Section */}
       <section className="py-20 px-6 max-w-7xl mx-auto border-t border-gray-200/80">
         <div className="text-center mb-10">
           <div className="text-xs font-bold uppercase tracking-wider text-[#0071e3] mb-2">Designed For Everyone</div>
@@ -626,10 +637,10 @@ export default function App() {
                 </p>
               </div>
               <div>
-                <LockIcon className="w-8 h-8 text-[#0071e3] mb-3" />
-                <h3 className="font-bold text-lg text-[#1d1d1f] mb-2">Keyless Smart Access</h3>
+                <KeyIcon className="w-8 h-8 text-[#0071e3] mb-3" />
+                <h3 className="font-bold text-lg text-[#1d1d1f] mb-2">Simple Lockbox Code Access</h3>
                 <p className="text-sm text-gray-600 leading-relaxed">
-                  Smart locks unlock directly through the app when you arrive at the property.
+                  When you arrive at the property entrance, the app delivers your secure lockbox code to grab the key and step right in.
                 </p>
               </div>
             </div>
@@ -646,9 +657,9 @@ export default function App() {
               </div>
               <div>
                 <LockIcon className="w-8 h-8 text-[#0071e3] mb-3" />
-                <h3 className="font-bold text-lg text-[#1d1d1f] mb-2">Automated Smart Lock Entry</h3>
+                <h3 className="font-bold text-lg text-[#1d1d1f] mb-2">Low-Cost Lockbox Integration</h3>
                 <p className="text-sm text-gray-600 leading-relaxed">
-                  Door access codes are automatically granted to verified renters when they arrive on-site.
+                  No need for expensive smart locks. Simply attach a standard lockbox and let the app manage code distribution securely.
                 </p>
               </div>
               <div>
@@ -690,7 +701,6 @@ export default function App() {
       </section>
 
       {}
-      {/* 6. CTA Banner */}
       <section className="py-16 px-6 max-w-7xl mx-auto">
         <div className="bg-[#0071e3] text-white rounded-3xl p-8 sm:p-14 text-center relative overflow-hidden shadow-2xl">
           <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight mb-4">
@@ -758,7 +768,6 @@ export default function App() {
       </section>
 
       {}
-      {/* 7. FAQ Section */}
       <section id="faq" className="py-20 px-6 max-w-4xl mx-auto border-t border-gray-200/80 text-left">
         <div className="text-center mb-12">
           <div className="text-xs font-bold uppercase tracking-wider text-[#0071e3] mb-2">Got Questions?</div>
@@ -766,6 +775,13 @@ export default function App() {
         </div>
 
         <div className="space-y-4">
+          <div className="bg-white p-6 rounded-2xl border border-gray-200">
+            <h3 className="text-base font-bold text-[#1d1d1f] mb-2">How do I access the property when I arrive?</h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              When you arrive at the property entrance, the app verifies your GPS location and completes a quick face check. Once confirmed, your screen displays the lockbox code so you can retrieve the key and open the door.
+            </p>
+          </div>
+
           <div className="bg-white p-6 rounded-2xl border border-gray-200">
             <h3 className="text-base font-bold text-[#1d1d1f] mb-2">Does HouseTour AI replace a real estate agent?</h3>
             <p className="text-sm text-gray-600 leading-relaxed">
@@ -790,7 +806,6 @@ export default function App() {
       </section>
 
       {}
-      {/* 8. Footer */}
       <footer className="bg-white border-t border-gray-200/80 py-12 px-6">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex flex-col items-center md:items-start space-y-1.5">
@@ -816,7 +831,7 @@ export default function App() {
         </div>
       </footer>
 
-      {/* Early Access Modal */}
+      {}
       {isModalOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-xs">
           <div className="bg-white rounded-3xl max-w-md w-full p-8 border border-gray-200 shadow-2xl relative text-left">
