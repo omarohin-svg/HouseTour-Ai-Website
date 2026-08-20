@@ -83,9 +83,9 @@ export default function App() {
   const [emailInput, setEmailInput] = useState('');
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  // Set website favicon to the official logo
+  // Set website favicon to the official logo (TypeScript fixed)
   useEffect(() => {
-    let link = document.querySelector("link[rel~='icon']");
+    let link = document.querySelector<HTMLLinkElement>("link[rel~='icon']");
     if (!link) {
       link = document.createElement('link');
       link.rel = 'icon';
