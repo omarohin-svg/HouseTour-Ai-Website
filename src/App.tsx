@@ -102,7 +102,7 @@ export default function App() {
   const roomVisionData = {
     'living-kitchen': {
       title: "Main Living & Kitchen Area",
-      image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1400&q=80",
+      image: "https://lh3.googleusercontent.com/d/1nvQUcH5iiASGwF97d49nRfkZNcH-sfkj",
       speech: "This is the open kitchen and main living room. Features stainless steel appliances, quartz countertops, and a 16x12 ft layout.",
       tags: [
         { label: "Kitchen Island 16' x 12'", top: "52%", left: "32%" },
@@ -239,8 +239,8 @@ export default function App() {
           <div className="lg:col-span-7 relative">
             <div className="relative rounded-[36px] overflow-hidden border-4 border-white shadow-2xl bg-gray-900 group">
               <img 
-                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1400&q=80" 
-                alt="Vacant flat open kitchen and living space" 
+                src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1400&q=80" 
+                alt="Vacant modern living space" 
                 className="w-full h-[460px] object-cover opacity-90 group-hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20"></div>
@@ -273,7 +273,7 @@ export default function App() {
                   <span className="w-2.5 h-2.5 rounded-full bg-[#34c759] animate-pulse"></span>
                   <span>Kira is viewing this space in real-time</span>
                 </div>
-                <span className="text-gray-300">Vacant • Open Kitchen & Living</span>
+                <span className="text-gray-300">Vacant • Living Area</span>
               </div>
 
             </div>
@@ -523,7 +523,7 @@ export default function App() {
                 <div className="lg:col-span-7">
                   <label className="block text-xs font-bold text-gray-700 mb-3">Upload Property Photos</label>
                   <div className="grid grid-cols-3 gap-3">
-                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=400&q=80" alt="Empty Open Kitchen" className="w-full h-28 object-cover rounded-xl border border-gray-200" />
+                    <img src="https://lh3.googleusercontent.com/d/1nvQUcH5iiASGwF97d49nRfkZNcH-sfkj" alt="Empty Open Kitchen" className="w-full h-28 object-cover rounded-xl border border-gray-200" />
                     <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=400&q=80" alt="Kitchen Counter" className="w-full h-28 object-cover rounded-xl border border-gray-200" />
                     <img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=400&q=80" alt="Empty Bedroom" className="w-full h-28 object-cover rounded-xl border border-gray-200" />
                     <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=400&q=80" alt="Empty Bathroom" className="w-full h-28 object-cover rounded-xl border border-gray-200" />
