@@ -808,12 +808,17 @@ export default function App() {
       {}
       <footer className="bg-white border-t border-gray-200/80 py-12 px-6">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="flex flex-col items-center md:items-start space-y-1.5">
+          <div className="flex flex-col items-center md:items-start space-y-3">
             <div className="flex items-center space-x-3">
               <HouseTourLogoIcon className="w-10 h-10" />
               <span className="font-extrabold text-xl text-[#1d1d1f]">
                 House Tour <span className="text-[#0071e3]">AI</span>
               </span>
+            </div>
+            <div className="flex items-center gap-2 border-t border-gray-200 pt-3 text-[11px] text-gray-500">
+              <span className="h-1.5 w-1.5 rounded-full bg-[#0071e3]" aria-hidden="true"></span>
+              <span>A sub-brand of</span>
+              <span className="font-bold tracking-wide text-[#1d1d1f]">Charter Residential</span>
             </div>
           </div>
 
@@ -825,8 +830,8 @@ export default function App() {
             <a href="#faq" className="hover:text-[#0071e3]">Privacy Policy</a>
           </div>
 
-          <div className="text-xs text-gray-400 font-medium">
-            © {new Date().getFullYear()} HouseTour AI. All rights reserved. Powered by Kira.
+          <div className="text-xs text-gray-400 font-medium text-center md:text-right">
+            © {new Date().getFullYear()} HouseTour AI, a Charter Residential sub-brand. All rights reserved. Powered by Kira.
           </div>
         </div>
       </footer>
