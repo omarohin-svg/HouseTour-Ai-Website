@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Favicon: simplified mark (no sparkle/door knob, heavier strokes) on a midnight tile so it reads on light and dark browser chrome. -->
+  <rect width="64" height="64" rx="14" fill="#04060D"/>
+  <g transform="translate(32 33) scale(0.86) translate(-32 -33)">
+    <g fill="none" stroke="#FFFFFF" stroke-width="6.6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M8 30 32 9l24 21"/>
+      <path d="M15 27v21a5 5 0 0 0 5 5"/>
+      <path d="M49 27v21a5 5 0 0 1-5 5"/>
+    </g>
+    <path d="M43 12.4a1.4 1.4 0 0 1 1.4-1.4h4.2a1.4 1.4 0 0 1 1.4 1.4v11.6l-7-6z" fill="#FFFFFF"/>
+    <path d="M21.5 31.5l8.5 3.4V47h-8.5z" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2" stroke-linejoin="round"/>
+    <circle cx="32" cy="53" r="5" fill="#04060D" stroke="#FFFFFF" stroke-width="4.2"/>
+    <circle cx="32" cy="53" r="2" fill="#359AE7"/>
+  </g>
+</svg>
