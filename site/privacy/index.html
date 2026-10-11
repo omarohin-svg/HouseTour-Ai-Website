@@ -1,0 +1,483 @@
+<!doctype html>
+<html lang="en-CA" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Privacy · HouseTour AI</title>
+<meta name="description" content="How HouseTour AI (operated by Charter Residential) handles your information when you join the waitlist.">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon-180.png">
+<meta name="theme-color" content="#04060D">
+<!-- HouseTour AI privacy page (dark v2). Built from src-v2/privacy.html by build.py into dark-v2/privacy/ and launch/privacy/; edit src-v2, not the output.
+     Served at /privacy/ on GitHub Pages; all paths are relative (../assets/, ../). -->
+<!--
+  PRIVACY NOTICE: copy approved by Ohin on October 7, 2026 (pre-launch waitlist notice).
+  This is a plain-English notice, NOT legal advice, and it has not been reviewed by a lawyer.
+  It should be reviewed (e.g. against PIPEDA and CASL) before or soon after launch, and again whenever
+  what we collect or who processes it changes. Do not add addresses or other legal claims unless confirmed.
+-->
+<style>
+@font-face{font-family:"Sora";src:url("../assets/fonts/Sora.ttf") format("truetype");font-weight:100 800;font-display:swap}
+@font-face{font-family:"Inter";src:url("../assets/fonts/Inter.ttf") format("truetype");font-weight:100 900;font-display:swap}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"Inter",system-ui,sans-serif;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:"Sora","Inter",sans-serif;margin:0;letter-spacing:-.035em;line-height:1.04;font-weight:600}
+p{margin:0}
+.wrap{max-width:1280px;margin:0 auto;padding:0 56px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ---------- nav ---------- */
+.nav{position:absolute;top:0;left:0;right:0;z-index:5}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:88px}
+.brand{display:flex;align-items:center;gap:12px;font-family:"Sora";font-weight:600;font-size:19px;letter-spacing:-.02em;color:var(--text)}
+.brand img{width:34px;height:auto}
+.brand b{font-weight:600;color:var(--brand-ai)}
+.nav-links{display:flex;align-items:center;gap:36px;font-size:15px;color:var(--muted)}
+.nav-links a:hover{color:var(--text)}
+.nav-right{display:flex;align-items:center;gap:14px}
+.pill{display:inline-flex;align-items:center;gap:10px;height:34px;padding:0 14px;border-radius:999px;border:1px solid var(--pill-line);background:var(--pill-bg);font-size:13px;font-weight:500;color:var(--text);white-space:nowrap;letter-spacing:.01em}
+.pill .dot{width:7px;height:7px;border-radius:50%;background:var(--kira);box-shadow:0 0 0 4px var(--dot-ring),0 0 12px var(--kira)}
+.pill .sep{opacity:.45}
+.btn-sm{height:40px;padding:0 18px;border-radius:999px;display:inline-flex;align-items:center;font-size:14px;font-weight:600;background:var(--btn-bg);color:var(--btn-text);box-shadow:var(--btn-shadow)}
+
+/* ---------- hero ---------- */
+.hero{position:relative;overflow:hidden;padding-top:88px}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.02fr) minmax(0,1fr);align-items:center;gap:24px;min-height:calc(900px - 88px);padding-bottom:40px}
+.hero-copy{position:relative;z-index:3;padding-bottom:8px}
+.hero h1{font-size:68px;margin:26px 0 22px;max-width:640px}
+.hero h1 .k{background:var(--k-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .sub{font-size:19px;line-height:1.6;color:var(--muted);max-width:540px}
+.hero .sub strong{color:var(--text);font-weight:600}
+
+.stage{position:relative;z-index:2;display:flex;align-items:center;justify-content:center;aspect-ratio:1/1;width:100%;max-width:660px;justify-self:end;margin-right:-24px}
+.stage .halo{position:absolute;inset:-6%;border-radius:50%;background:var(--halo)}
+.stage .ring{position:absolute;border-radius:50%;border:1px solid var(--ring)}
+.stage .r1{inset:4%}
+.stage .r2{inset:-10%;opacity:.6}
+.stage .r3{inset:-24%;opacity:.35}
+.stage .floor{position:absolute;left:18%;right:18%;bottom:4%;height:9%;border-radius:50%;background:var(--floor);filter:blur(14px)}
+.stage .kira{position:relative;width:90%;height:auto;filter:var(--kira-filter)}
+.stage .tag{position:absolute;display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:14px;background:var(--glass);border:1px solid var(--line);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);font-size:13px;color:var(--text);box-shadow:var(--tag-shadow);white-space:nowrap}
+.stage .tag small{display:block;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600;line-height:1.3}
+.stage .tag .ic{width:30px;height:30px;border-radius:9px;display:grid;place-items:center;background:var(--ic-bg);color:var(--kira)}
+.stage .t1{left:-6%;top:3%}
+.stage .t2{right:-3%;bottom:-3%}
+
+/* ---------- waitlist form ---------- */
+.wl{margin-top:34px;max-width:560px;padding:10px;border-radius:24px;background:var(--card);border:1px solid var(--line);box-shadow:var(--card-shadow);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
+.seg{display:grid;grid-template-columns:1fr 1.45fr;gap:4px;padding:4px;margin:0;border:0;border-radius:16px;background:var(--seg-bg)}
+.seg label{position:relative;display:flex;align-items:center;justify-content:center;gap:8px;height:42px;border-radius:12px;font-size:14px;font-weight:500;color:var(--muted);cursor:pointer;white-space:nowrap}
+.seg input{position:absolute;opacity:0;pointer-events:none}
+.seg label:has(input:checked){background:var(--seg-on);color:var(--text);box-shadow:var(--seg-shadow)}
+.seg label:has(input:checked) svg{color:var(--kira)}
+.seg label:has(input:focus-visible){outline:2px solid var(--kira);outline-offset:2px}
+.wl .row{display:flex;gap:8px;margin-top:8px}
+.field{flex:1;display:flex;align-items:center;gap:10px;height:56px;padding:0 16px;border-radius:16px;background:var(--input-bg);border:1px solid var(--input-line);color:var(--muted)}
+.field input{flex:1;min-width:0;height:100%;border:0;outline:0;background:transparent;color:var(--text);font:inherit;font-size:16px}
+.field input::placeholder{color:var(--placeholder)}
+.field:focus-within{border-color:var(--kira);box-shadow:0 0 0 4px var(--focus)}
+.btn{height:56px;padding:0 26px;border:0;border-radius:16px;display:inline-flex;align-items:center;justify-content:center;gap:10px;font:inherit;font-size:16px;font-weight:600;letter-spacing:-.005em;cursor:pointer;background:var(--btn-bg);color:var(--btn-text);box-shadow:var(--btn-shadow);white-space:nowrap}
+.micro{display:flex;align-items:center;gap:8px;padding:12px 8px 4px;font-size:13px;color:var(--muted)}
+.micro svg{color:var(--kira);flex:none}
+
+/* ---------- sections ---------- */
+section{position:relative}
+.sec{padding:120px 0}
+.label{display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--kira-text)}
+.label::before{content:"";width:22px;height:1px;background:currentColor}
+h2{font-size:58px}
+.lead{font-size:20px;line-height:1.6;color:var(--muted);max-width:520px}
+
+/* how */
+.how .head{display:flex;align-items:flex-end;justify-content:space-between;gap:40px;margin-bottom:72px}
+.how h2{margin-top:20px}
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:20px;counter-reset:s}
+.step{position:relative;padding:30px 28px 34px;border-radius:24px;background:var(--card);border:1px solid var(--line);min-height:280px;display:flex;flex-direction:column}
+.step .n{font-family:"Sora";font-size:14px;font-weight:500;color:var(--muted);letter-spacing:.06em}
+.step .ic{margin-top:44px;width:52px;height:52px;border-radius:16px;display:grid;place-items:center;background:var(--ic-bg);color:var(--kira);box-shadow:var(--ic-glow)}
+.step h3{margin-top:auto;padding-top:28px;font-size:26px;letter-spacing:-.03em}
+.step p{margin-top:10px;font-size:15px;line-height:1.55;color:var(--muted);min-height:3.1em}
+.step:not(:last-child)::after{content:"";position:absolute;top:44px;right:-15px;width:10px;height:10px;border-top:1.5px solid var(--kira);border-right:1.5px solid var(--kira);transform:rotate(45deg);opacity:.7}
+.step.last{background:var(--card-hi);border-color:var(--line-hi)}
+
+/* split sections */
+.split .wrap{display:grid;grid-template-columns:1fr 1fr;gap:96px;align-items:center}
+.split h2{margin:22px 0 26px}
+.split.flip .copy{order:2}
+.visual{position:relative;border-radius:32px;background:var(--panel);border:1px solid var(--line);aspect-ratio:1.08/1;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.visual::before{content:"";position:absolute;inset:0;background:var(--panel-glow)}
+/* renters visual */
+.ask{position:relative;display:flex;flex-direction:column;align-items:center;gap:26px;width:78%}
+.ask img{width:150px;filter:var(--kira-filter-sm)}
+.ask .q{font-family:"Sora";font-size:15px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.chips{display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
+.chip{display:inline-flex;align-items:center;gap:10px;height:52px;padding:0 22px;border-radius:999px;background:var(--glass);border:1px solid var(--line);font-size:17px;font-weight:500;box-shadow:var(--tag-shadow)}
+.chip svg{color:var(--kira)}
+.schedule{display:inline-flex;align-items:center;gap:10px;font-size:14px;color:var(--muted)}
+.schedule b{color:var(--text);font-weight:600}
+/* landlord visual */
+.flow{position:relative;display:flex;flex-direction:column;gap:14px;width:76%}
+.flow .it{display:flex;align-items:center;gap:16px;padding:20px 22px;border-radius:20px;background:var(--glass);border:1px solid var(--line);box-shadow:var(--tag-shadow);font-size:17px;font-weight:500}
+.flow .it .ic{flex:none;width:44px;height:44px;border-radius:13px;display:grid;place-items:center;background:var(--ic-bg);color:var(--kira)}
+.flow .it .ok{margin-left:auto;color:var(--kira)}
+.flow .it.k{background:var(--card-hi);border-color:var(--line-hi)}
+.flow .it.k img{width:44px;flex:none}
+.flow .conn{width:1px;height:18px;margin:-8px 0 -8px 44px;background:linear-gradient(var(--kira),transparent)}
+
+/* tagline */
+.tagline{padding:170px 0;text-align:center;overflow:hidden}
+.tagline::before{content:"";position:absolute;left:50%;top:0;bottom:0;width:1200px;transform:translateX(-50%);background:var(--tag-glow);pointer-events:none}
+.tagline .eye{position:relative;width:76px;margin:0 auto 36px;filter:var(--kira-filter-sm)}
+.tagline h2{position:relative;font-size:104px;letter-spacing:-.045em;line-height:1}
+.tagline h2 .v{background:var(--k-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* bottom waitlist */
+.join{padding:40px 0 140px}
+.join .box{position:relative;overflow:hidden;border-radius:40px;padding:84px 56px 80px;background:var(--panel);border:1px solid var(--line);text-align:center}
+.join .box::before{content:"";position:absolute;left:50%;top:-40%;width:1000px;height:700px;transform:translateX(-50%);border-radius:50%;background:var(--panel-glow-top);pointer-events:none}
+.join .box > *{position:relative}
+.join h2{font-size:60px;margin:26px 0 0}
+.join .wl{margin:40px auto 0;text-align:left}
+
+/* footer */
+.foot{border-top:1px solid var(--line);padding:40px 0 48px}
+.foot .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;font-size:14px;color:var(--muted)}
+.foot .brand{font-size:17px}
+.foot .brand img{width:30px}
+.foot .follow b{color:var(--text);font-weight:600}
+.foot .follow .sep{margin:0 10px;opacity:.5}
+
+/* ---------- responsive ---------- */
+@media (max-width:1100px){
+  .nav-links{display:none}
+  .hero h1{font-size:56px}
+  h2{font-size:46px}
+  .steps{grid-template-columns:repeat(2,1fr)}
+  .step:nth-child(2)::after{display:none}
+  .split .wrap{gap:56px}
+  .tagline h2{font-size:78px}
+}
+@media (max-width:760px){
+  body{font-size:16px}
+  .wrap{padding:0 20px}
+  .nav .wrap{height:68px}
+  .brand{font-size:17px;gap:10px}
+  .brand img{width:28px}
+  .nav .nav-right{display:none}
+  .nav .pill{height:30px;font-size:12px;padding:0 12px}
+  .hero{padding-top:68px}
+  .hero .wrap{grid-template-columns:1fr;min-height:0;gap:0;padding-bottom:56px}
+  .stage{order:-1;width:212px;justify-self:center;margin:6px auto 0}
+  .stage .kira{width:92%}
+  .stage .tag{display:none}
+  .stage .r3{inset:-18%}
+  .hero-copy{text-align:left}
+  .hero .eyebrow{margin-top:12px}
+  .hero h1{font-size:38px;margin:16px 0 14px;letter-spacing:-.04em}
+  .hero .sub{font-size:16px;line-height:1.55}
+  .wl{margin-top:22px;padding:8px;border-radius:20px}
+  .seg{grid-template-columns:1fr 1.5fr}
+  .seg label{font-size:13px;height:40px;gap:6px}
+  .seg label svg{display:none}
+  .wl .row{flex-direction:column}
+  .field,.btn{height:52px;flex:none}
+  .btn{width:100%}
+  .sec{padding:96px 0}
+  h2{font-size:36px}
+  .lead{font-size:17px}
+  .how .head{display:block;margin-bottom:40px}
+  .steps{grid-template-columns:1fr;gap:12px}
+  .step{min-height:0;padding:22px 22px;display:grid;grid-template-columns:52px 1fr;column-gap:18px;align-items:center}
+  .step .n{grid-column:1/-1;margin-bottom:14px}
+  .step .ic{margin-top:0}
+  .step h3{padding-top:0;margin-top:0;font-size:22px}
+  .step p{grid-column:2;margin-top:6px;min-height:0}
+  .step::after{display:none}
+  .split .wrap{grid-template-columns:1fr;gap:44px}
+  .split.flip .copy{order:0}
+  .visual{border-radius:24px;aspect-ratio:auto;padding:44px 0}
+  .ask{width:88%;gap:20px}
+  .ask img{width:110px}
+  .chip{height:46px;padding:0 18px;font-size:15px}
+  .flow{width:88%}
+  .flow .it{padding:16px;font-size:15px;gap:14px}
+  .flow .it .ic,.flow .it.k img{width:38px;height:38px}
+  .tagline{padding:110px 0}
+  .tagline .eye{width:60px;margin-bottom:28px}
+  .tagline h2{font-size:46px}
+  .tagline::before{width:700px}
+  .join{padding:8px 0 88px}
+  .join .box{padding:52px 12px 12px;border-radius:28px}
+  .join h2{font-size:36px}
+  .join .wl{margin-top:30px}
+  .foot .wrap{flex-direction:column;align-items:flex-start;gap:14px}
+  .foot .follow .sep{display:none}
+  .foot .follow span{display:block}
+}
+
+/* theme */
+:root{
+  --bg:#04060D; --text:#F3F6FB; --muted:#93A0B4; --placeholder:#5E6A7E;
+  --kira:#359AE7; --kira-hi:#7BECFD; --kira-deep:#0253BB; --kira-text:#6CC2F5; --brand-ai:#59B4F0;
+  --line:rgba(255,255,255,.08); --line-hi:rgba(53,154,231,.38);
+  --pill-line:rgba(53,154,231,.32); --pill-bg:rgba(53,154,231,.08); --dot-ring:rgba(53,154,231,.18);
+  --btn-bg:linear-gradient(180deg,#5AB2F0 0%,#359AE7 55%,#2286D8 100%); --btn-text:#03111F;
+  --btn-shadow:0 0 0 1px rgba(123,236,253,.35) inset,0 10px 30px -8px rgba(53,154,231,.75),0 0 60px -10px rgba(53,154,231,.6);
+  --k-grad:linear-gradient(100deg,#9BEFFF 0%,#59B4F0 45%,#359AE7 100%);
+  --halo:radial-gradient(closest-side,rgba(53,154,231,.42),rgba(53,154,231,.12) 55%,rgba(53,154,231,0) 100%);
+  --ring:rgba(123,200,245,.16);
+  --floor:radial-gradient(closest-side,rgba(53,154,231,.85),rgba(53,154,231,0));
+  --kira-filter:drop-shadow(0 0 40px rgba(53,154,231,.45)) drop-shadow(0 30px 60px rgba(0,0,0,.6));
+  --kira-filter-sm:drop-shadow(0 0 24px rgba(53,154,231,.55));
+  --glass:rgba(16,22,36,.62); --tag-shadow:0 20px 40px -20px rgba(0,0,0,.8); --ic-bg:rgba(53,154,231,.14); --ic-glow:0 0 30px -6px rgba(53,154,231,.6);
+  --card:rgba(255,255,255,.035); --card-hi:linear-gradient(180deg,rgba(53,154,231,.16),rgba(53,154,231,.04)); --card-shadow:0 40px 80px -40px rgba(0,0,0,.9),0 0 0 1px rgba(255,255,255,.02) inset;
+  --seg-bg:rgba(255,255,255,.04); --seg-on:rgba(53,154,231,.18); --seg-shadow:0 0 0 1px rgba(53,154,231,.45) inset;
+  --input-bg:rgba(0,0,0,.35); --input-line:rgba(255,255,255,.09); --focus:rgba(53,154,231,.25);
+  --panel:linear-gradient(180deg,#0A1020 0%,#060912 100%);
+  --panel-glow:radial-gradient(60% 55% at 50% 45%,rgba(53,154,231,.20),rgba(53,154,231,0));
+  --panel-glow-top:radial-gradient(closest-side,rgba(53,154,231,.30),rgba(53,154,231,0));
+  --tag-glow:radial-gradient(closest-side,rgba(53,154,231,.22),rgba(53,154,231,0));
+}
+.hero::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background:
+    radial-gradient(900px 700px at 74% 46%,rgba(53,154,231,.20),rgba(53,154,231,0) 70%),
+    radial-gradient(1200px 500px at 50% 0%,rgba(40,70,130,.18),rgba(0,0,0,0) 70%);}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:linear-gradient(90deg,transparent,rgba(53,154,231,.45),transparent)}
+.hero .grid{position:absolute;inset:0;pointer-events:none;opacity:.5;
+  background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);
+  background-size:80px 80px;-webkit-mask-image:radial-gradient(700px 520px at 74% 48%,#000,transparent 75%);mask-image:radial-gradient(700px 520px at 74% 48%,#000,transparent 75%)}
+.tagline{background:none}
+
+/* ---------- v2 additions ---------- */
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+:root{--err:#FF8A8A;--err-line:rgba(255,122,122,.75);--err-ring:rgba(255,122,122,.18);--focus-outline:#9FD8FF}
+.brand img{width:36px;height:36px;margin-top:-3px}
+.foot .brand img{width:32px;height:32px;margin-top:-3px}
+.btn-sm .sm{display:none}
+.btn-sm{border:0;cursor:pointer}
+
+/* focus states (keyboard-visible) */
+.btn:focus-visible,.btn-sm:focus-visible,.brand:focus-visible,.nav-links a:focus-visible{outline:2px solid var(--focus-outline);outline-offset:3px}
+.btn:focus-visible{box-shadow:var(--btn-shadow),0 0 0 6px rgba(53,154,231,.28)}
+.seg label:has(input:focus-visible){outline:2px solid var(--focus-outline);outline-offset:2px;color:var(--text)}
+.field:focus-within{border-color:var(--kira);box-shadow:0 0 0 4px rgba(53,154,231,.28);background:rgba(0,0,0,.5)}
+.field:focus-within svg{color:var(--kira)}
+.btn:hover{filter:brightness(1.06)}
+
+/* invalid state */
+.field.is-invalid{border-color:var(--err-line);box-shadow:0 0 0 4px var(--err-ring)}
+.field.is-invalid svg{color:var(--err)}
+.wl .row{flex-wrap:wrap}
+.row .err{order:3;flex-basis:100%}
+.err{display:flex;align-items:center;gap:8px;margin:2px 8px 0;font-size:14px;font-weight:500;color:var(--err)}
+.err[hidden]{display:none}
+.err svg{flex:none}
+
+/* success state */
+.wl-done{display:flex;align-items:center;gap:18px;padding:22px 20px;min-height:132px;outline:none}
+.wl-done[hidden]{display:none}
+.wl-done .done-ic{flex:none;width:56px;height:56px;border-radius:18px;display:grid;place-items:center;background:rgba(53,154,231,.16);color:var(--kira-hi);box-shadow:0 0 0 1px rgba(53,154,231,.45) inset,0 0 36px -6px rgba(53,154,231,.7)}
+.wl-done .done-h{font-family:"Sora",sans-serif;font-size:24px;font-weight:600;letter-spacing:-.03em;line-height:1.2;color:var(--text)}
+.wl-done .done-p{margin-top:6px;font-size:16px;color:var(--muted)}
+.wl-done .done-p b{color:var(--text);font-weight:600}
+.wl.is-done{border-color:rgba(53,154,231,.4)}
+.join .wl-done{justify-content:center;text-align:left}
+
+@media (max-width:760px){
+  .nav{position:fixed;background:rgba(4,6,13,.78);-webkit-backdrop-filter:blur(14px) saturate(140%);backdrop-filter:blur(14px) saturate(140%);border-bottom:1px solid rgba(255,255,255,.06)}
+  .nav .nav-right{display:flex}
+  .wl,.sec,#join{scroll-margin-top:84px}
+  .nav .pill{display:none}
+  .nav .btn-sm{display:inline-flex;height:36px;padding:0 16px;font-size:14px}
+  .btn-sm .lg{display:none}
+  .btn-sm .sm{display:inline}
+  .stage{width:196px;margin:0 auto}
+  .hero .eyebrow{margin-top:8px}
+  .hero h1{margin:14px 0 12px}
+  .wl{margin-top:20px}
+  .wl-done{padding:18px 14px;min-height:0;gap:14px}
+  .wl-done .done-ic{width:48px;height:48px;border-radius:15px}
+  .wl-done .done-h{font-size:21px}
+  .wl-done .done-p{font-size:15px}
+  .row .err{order:0;margin:-2px 6px 2px}
+}
+
+/* ---------- r2: consent micro text + footer links ---------- */
+.micro{align-items:flex-start;gap:9px;padding:12px 10px 4px 8px;font-size:12.5px;line-height:1.55;color:#A3AFC2;text-wrap:pretty}
+.micro svg{margin-top:3px}
+.foot-meta{display:flex;flex-direction:column;align-items:flex-end;gap:8px;text-align:right}
+.foot-links{display:flex;align-items:center;gap:10px;margin:0;font-size:13.5px}
+.foot-links .sep{opacity:.5}
+.foot-links a{color:var(--text);text-decoration:underline;text-decoration-color:rgba(255,255,255,.3);text-underline-offset:3px}
+.foot-links a:hover{text-decoration-color:var(--kira)}
+.foot-links a:focus-visible{outline:2px solid var(--focus-outline);outline-offset:3px;border-radius:4px}
+@media (max-width:760px){
+  .micro{font-size:12px;padding:10px 6px 2px 6px}
+  .stage{width:178px}
+  .hero .eyebrow{margin-top:4px}
+  .hero h1{margin:12px 0 12px}
+  .wl{margin-top:18px}
+  .foot-meta{align-items:flex-start;text-align:left}
+  .foot-links{flex-wrap:wrap}
+}
+
+/* ---------- launch: footer contact (email + phone) + Instagram handle ---------- */
+.foot .follow .handle{color:var(--text);text-decoration:underline;text-decoration-color:rgba(255,255,255,.3);text-underline-offset:3px}
+.foot .follow .handle:hover{text-decoration-color:var(--kira)}
+.foot .follow .handle:focus-visible{outline:2px solid var(--focus-outline);outline-offset:3px;border-radius:4px}
+.foot-links .contact{display:inline-flex;flex-wrap:wrap;align-items:center;column-gap:10px;row-gap:4px}
+.foot-links .contact a{white-space:nowrap}
+@media (max-width:760px){
+  .foot-links{row-gap:6px}
+  .foot-links .sep-contact{display:none}
+  .foot-links .contact{flex-basis:100%}
+  .foot-links .contact .sep{display:none}
+  .foot-links .contact a[href^="tel:"]{flex-basis:100%}
+}
+
+/* ---------- launch: Kit states ---------- */
+.wl-done .done-p a{color:var(--text);text-decoration:underline;text-decoration-color:rgba(255,255,255,.35);text-underline-offset:3px}
+
+/* v3 polish: avoid a one-word orphan ("in") in the landlord flow items on narrow screens */
+.flow .it{text-wrap:balance}
+
+/* ---------- privacy page ---------- */
+.legal{position:relative;overflow:hidden;padding:148px 0 120px}
+.legal .wrap{position:relative;z-index:1;max-width:920px}
+.legal-glow{position:absolute;left:50%;top:-340px;width:1100px;height:700px;transform:translateX(-50%);background:var(--panel-glow-top);opacity:.75;pointer-events:none}
+.legal-head h1{font-size:56px;margin:20px 0 22px;max-width:760px}
+.legal-head .lede{font-size:19px;line-height:1.6;color:var(--muted);max-width:640px}
+.legal-head .updated{margin:0 0 22px;font-size:14px;color:var(--muted)}
+.legal-list{margin-top:56px;border-top:1px solid var(--line)}
+.legal-list .item{display:grid;grid-template-columns:260px 1fr;gap:40px;padding:28px 0;border-bottom:1px solid var(--line)}
+.legal-list h2{font-size:21px;letter-spacing:-.02em;line-height:1.35}
+.legal-list p,.legal-list li{font-size:17px;line-height:1.65;color:var(--muted)}
+.legal-list p + p,.legal-list p + ul{margin-top:12px}
+.legal-list ul{margin:0;padding:0;list-style:none}
+.legal-list li{position:relative;padding-left:22px;margin-top:8px}
+.legal-list li::before{content:"";position:absolute;left:2px;top:.68em;width:7px;height:7px;border-radius:50%;background:var(--kira);box-shadow:0 0 10px rgba(53,154,231,.7)}
+.legal-list a,.legal .back a{color:var(--text);text-decoration:underline;text-decoration-color:rgba(255,255,255,.3);text-underline-offset:3px}
+.legal-list a:hover,.legal .back a:hover{text-decoration-color:var(--kira)}
+.legal a:focus-visible{outline:2px solid var(--focus-outline);outline-offset:3px;border-radius:4px}
+.legal .back{margin-top:40px;font-size:15px}
+.foot-links a[aria-current="page"]{text-decoration-color:var(--kira)}
+@media (max-width:760px){
+  .legal{padding:104px 0 80px}
+  .legal-head h1{font-size:36px;margin:16px 0 16px}
+  .legal-head .lede{font-size:17px}
+  .legal-list{margin-top:40px}
+  .legal-list .item{grid-template-columns:1fr;gap:8px;padding:22px 0}
+  .legal-list h2{font-size:19px}
+  .legal-list p,.legal-list li{font-size:16px}
+  .legal-glow{width:640px;height:520px;top:-300px}
+}
+
+</style>
+</head>
+<body class="legal-page">
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="../" aria-label="HouseTour AI home"><img src="../assets/housetour-mark-small.svg" alt="" width="36" height="36"><span>HouseTour <b>AI</b></span></a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="../#how">How it works</a>
+      <a href="../#renters">Renters</a>
+      <a href="../#landlords">Landlords &amp; operators</a>
+    </nav>
+    <div class="nav-right">
+      <span class="pill"><span class="dot"></span>In development</span>
+      <a class="btn-sm js-join" href="../#wl-hero"><span class="lg">Join the waitlist</span><span class="sm">Join</span></a>
+    </div>
+  </div>
+</header>
+
+<main id="top" class="legal">
+  <div class="legal-glow" aria-hidden="true"></div>
+  <div class="wrap">
+    <header class="legal-head">
+      <span class="label">Privacy</span>
+      <h1>Your privacy on the waitlist.</h1>
+      <p class="updated">Last updated: October 7, 2026</p>
+      <p class="lede">HouseTour AI is in development. This notice explains, in plain English, what information we collect when you join the waitlist on this site and what we do with it.</p>
+    </header>
+
+    <div class="legal-list">
+      <section class="item">
+        <h2>Who we are</h2>
+        <div>
+          <p>HouseTour AI is operated by Charter Residential, based in Toronto, Ontario. In this notice, “we”, “us” and “our” mean HouseTour AI and Charter Residential.</p>
+        </div>
+      </section>
+      <section class="item">
+        <h2>What we collect</h2>
+        <div>
+          <p>When you join the waitlist, we collect:</p>
+          <ul>
+            <li>your email address;</li>
+            <li>whether you chose renter or landlord / operator;</li>
+            <li>the signup source (which form on the site you used) and the time you signed up.</li>
+          </ul>
+        </div>
+      </section>
+      <section class="item">
+        <h2>Why we collect it</h2>
+        <div>
+          <p>We use this information to keep your place on the waitlist and to send you email updates about HouseTour AI, such as early access in Toronto &amp; GTA. Your renter or landlord / operator choice helps us send you the updates that are relevant to you.</p>
+          <p>We only email you because you asked to join. By submitting the form you give us your consent to receive these emails, in line with Canada’s Anti-Spam Legislation (CASL). You can withdraw that consent at any time.</p>
+        </div>
+      </section>
+      <section class="item">
+        <h2>Who stores it for us</h2>
+        <div>
+          <p>Our waitlist is stored and our emails are sent using Kit (formerly ConvertKit), an email service provider. Kit handles this information on our behalf to run the waitlist and send our emails.</p>
+        </div>
+      </section>
+      <section class="item">
+        <h2>How long we keep it, and unsubscribing</h2>
+        <div>
+          <p>We keep your information while you are on the waitlist. You can leave at any time: every email we send includes an unsubscribe link, or you can email us at <a href="mailto:ammo@aihousetour.com">ammo@aihousetour.com</a> and we will remove you.</p>
+        </div>
+      </section>
+      <section class="item">
+        <h2>We don’t sell your data</h2>
+        <div>
+          <p>We do not sell your personal information.</p>
+        </div>
+      </section>
+      <section class="item">
+        <h2>Access, correction and deletion</h2>
+        <div>
+          <p>You can ask to see the information we hold about you, or ask us to correct or delete it. Just email <a href="mailto:ammo@aihousetour.com">ammo@aihousetour.com</a> from the address you signed up with.</p>
+        </div>
+      </section>
+      <section class="item">
+        <h2>Questions</h2>
+        <div>
+          <p>If you have any questions about this notice or how we handle your information, email <a href="mailto:ammo@aihousetour.com">ammo@aihousetour.com</a>, or call or text us at <a href="tel:+14379742863">+1 437 974 2863</a>.</p>
+          <p>We may update this notice as HouseTour AI develops. When we do, we will change the “Last updated” date at the top of this page.</p>
+        </div>
+      </section>
+    </div>
+
+    <p class="back"><a href="../">← Back to home</a></p>
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <a class="brand" href="../" aria-label="HouseTour AI home"><img src="../assets/housetour-mark-small.svg" alt="" width="32" height="32"><span>HouseTour <b>AI</b></span></a>
+    <div class="foot-meta">
+      <p class="follow"><span>Follow the build <a class="handle" href="https://www.instagram.com/housetourai/" target="_blank" rel="noopener" aria-label="@housetourai on Instagram (opens in a new tab)"><b>@housetourai</b></a></span><span class="sep">·</span><span>a Charter Residential company</span></p>
+      <p class="foot-links">
+        <a href="./" aria-current="page">Privacy</a>
+        <span class="sep sep-contact" aria-hidden="true">·</span>
+        <span class="contact">Contact: <a href="mailto:ammo@aihousetour.com" aria-label="Email ammo@aihousetour.com">ammo@aihousetour.com</a><span class="sep" aria-hidden="true">·</span><a href="tel:+14379742863" aria-label="Call or text +1 437 974 2863">+1 437 974 2863</a></span>
+      </p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

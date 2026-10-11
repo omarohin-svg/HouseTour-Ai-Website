@@ -1,3 +1,13 @@
+# DRAFT for review (not committed anywhere). Replaces .github/workflows/deploy.yml in
+# omarohin-svg/HouseTour-Ai-Website on a feature branch, via PR.
+#
+# What changes vs. today's workflow:
+#   - No Node / npm ci / `tsc -b && vite build` anymore. The redesign is plain static HTML.
+#   - Uploads the ./site folder as the Pages artifact (was ./dist from the Vite build).
+#   - Same triggers (push to main + manual), same permissions, same concurrency group,
+#     same github-pages environment, same configure/upload/deploy actions (pinned majors unchanged).
+# The custom domain (aihousetour.com) lives in Settings > Pages and is NOT affected by this file.
+
 name: Deploy to GitHub Pages
 
 on:
@@ -22,17 +32,19 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: npm
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Build
-        run: npm run build
+      - name: Guard - site files present, Kit config sane, no secrets
+        run: |
+          set -e
+          test -f site/index.html
+          test -f site/privacy/index.html
+          test -f site/assets/kira.png
+          # Never ship a Kit API *secret* or a v4 key in a public page.
+          if grep -RInE "api_secret|kit_[A-Za-z0-9]{16,}" site/; then
+            echo "::error::Possible Kit secret found in site/. Only the public Kit form ID and tag IDs may be in the page; no keys."; exit 1
+          fi
+          if grep -q "TODO_KIT_FORM_ID" site/index.html; then
+            echo "::warning::KIT_FORM_ID is still the TODO value - the waitlist will NOT send signups to Kit."
+          fi
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -40,7 +52,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist
+          path: ./site
 
   deploy:
     environment:
