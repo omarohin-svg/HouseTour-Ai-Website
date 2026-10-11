@@ -1,11 +1,11 @@
-# DRAFT for review (not committed anywhere). Replaces .github/workflows/deploy.yml in
-# omarohin-svg/HouseTour-Ai-Website on a feature branch, via PR.
+# Publishes the static site in ./site to GitHub Pages (aihousetour.com).
+# Runs on every push to main, and manually via workflow_dispatch. Merging to main publishes immediately.
 #
-# What changes vs. today's workflow:
-#   - No Node / npm ci / `tsc -b && vite build` anymore. The redesign is plain static HTML.
-#   - Uploads the ./site folder as the Pages artifact (was ./dist from the Vite build).
-#   - Same triggers (push to main + manual), same permissions, same concurrency group,
-#     same github-pages environment, same configure/upload/deploy actions (pinned majors unchanged).
+# Notes:
+#   - No Node / npm / Vite build: site/ is plain static HTML, uploaded as-is.
+#   - The guard step checks the required files exist, fails if anything that looks like a Kit secret is in site/,
+#     and warns if KIT_FORM_ID is still the TODO placeholder.
+#   - The previous React + Vite site (and its workflow) is preserved at the git tag legacy-react-vite.
 # The custom domain (aihousetour.com) lives in Settings > Pages and is NOT affected by this file.
 
 name: Deploy to GitHub Pages
