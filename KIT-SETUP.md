@@ -17,6 +17,7 @@ Each signup sends exactly this (and nothing else):
 | Email address | `email_address` | what the person typed | nothing (built in) |
 | Renter or landlord/operator (as a custom field) | `fields[audience]` | `renter` or `landlord-operator` | custom field **`audience`** |
 | Which form they used | `fields[signup_source]` | `hero` (top of the page) or `join` (bottom of the page) | custom field **`signup_source`** |
+| Which post/link brought them | `fields[post_source]` | the `?src=` value from the link (e.g. `renter-reel`), or `direct` if there was none | custom field **`post_source`** |
 | Renter or landlord/operator (as a tag) | `tags[]` | the tag **ID number** of one of the two tags | tags **`renter`** and **`landlord-operator`** |
 
 **Signup date and time:** you don't need to set anything up. Kit records it on every subscriber automatically (it's the "Created date and time" column when you export subscribers). The website does not send a time.
@@ -35,10 +36,11 @@ The renter/landlord choice is stored twice on purpose: the **tag** is the easies
 
 ## Step 2: Create the two custom fields (exact names matter)
 
-Kit turns the name you type into a "key" (lowercase, spaces become underscores). The website sends the keys `audience` and `signup_source`, so type the names **exactly like this, all lowercase**:
+Kit turns the name you type into a "key" (lowercase, spaces become underscores). The website sends the keys `audience`, `signup_source` and `post_source`, so type the names **exactly like this, all lowercase**:
 
 - `audience`
 - `signup_source`
+- `post_source`
 
 How (inside the form builder from step 1):
 
@@ -46,7 +48,7 @@ How (inside the form builder from step 1):
 2. Click the new field. In the right-hand sidebar, set **Save as → Custom field**.
 3. In the **Custom field** box, type `audience` and choose the option to create it.
 4. Leave **Required** **unchecked**.
-5. Repeat 1–4 for `signup_source`.
+5. Repeat 1–4 for `signup_source` and `post_source`.
 6. Click **Save**.
 
 These fields will never show on the website (our page sends the values itself). Adding them to this Kit form is so the HTML in step 5 shows their exact names, which you can check.
@@ -88,7 +90,7 @@ Heads-up if double opt-in is ON: the website's message after signing up says "Yo
    (It's also the number in your browser's address bar while you edit the form.)
 4. **Tag IDs:** find the dropdown from step 3 in the HTML. Each choice looks like
    `<option value="5551234">renter</option>`. The number in `value="..."` is that tag's ID. Write down the number for `renter` and the number for `landlord-operator`.
-5. **Check the field names:** search the HTML for `fields[`. You should see `fields[audience]` and `fields[signup_source]`. If Kit shows a different name inside the brackets, use that name in step 6 instead.
+5. **Check the field names:** search the HTML for `fields[`. You should see `fields[audience]`, `fields[signup_source]` and `fields[post_source]`. If Kit shows a different name inside the brackets, use that name in step 6 instead.
 
 ## Step 6: Paste the values into the website file
 
@@ -101,6 +103,7 @@ Open **`src-v2/waitlist.js`** (in this project folder) in a plain text editor. O
 | **35** | `landlord_operator: 'TODO_LANDLORD_TAG_ID'` | `landlord_operator: '5551235'` |
 | **37** | `var KIT_AUDIENCE_FIELD = 'audience';` | leave as is (only change it if step 5 showed a different name) |
 | **38** | `var KIT_SOURCE_FIELD = 'signup_source';` | leave as is (only change it if step 5 showed a different name) |
+| **44** | `var KIT_POST_FIELD = 'post_source';` | leave as is (only change it if step 5 showed a different name) |
 
 Rules: numbers only, keep the quotes, keep the commas and semicolons. Don't paste any API key anywhere.
 
@@ -111,6 +114,19 @@ python3 src-v2/build.py
 ```
 
 It should print `built dark-v2/index.html …` and `built launch/index.html …`. That updates both copies of the page. **Never edit `dark-v2/` or `launch/` by hand.** Always edit `src-v2/` and rebuild.
+
+## Tracking links for posts (`?src=`)
+
+Add `?src=<name>` to the link in each post, bio or ad. Anyone who signs up after arriving through that link gets that name in `post_source`; people who arrive without one get `direct`. The name is remembered for the rest of the visit (same browser tab).
+
+Naming guide:
+
+- lowercase letters, numbers and hyphens only, max 40 characters (anything else is stripped, e.g. `Renter_Reel!` becomes `renterreel`)
+- channel or audience first, then the post: `renter-reel`, `landlord-reel`, `meet-kira`, `ig-bio`
+- add a number or date for repeats: `renter-reel-2`, `meet-kira-oct26`
+- keep a list of the names you've used so the Kit export is easy to read
+
+Examples: `https://aihousetour.com/?src=renter-reel`, `https://aihousetour.com/?src=landlord-reel`, `https://aihousetour.com/?src=meet-kira`, `https://aihousetour.com/?src=ig-bio`
 
 ## Step 7: Test checklist (after the site with your IDs is published)
 
@@ -123,7 +139,9 @@ Use an email you can check. Gmail "plus" addresses are handy: `you+hero@gmail.co
 - [ ] In Kit → **Subscribers**, open each test subscriber and check:
   - `you+hero@…`: tag **renter**, `audience` = `renter`, `signup_source` = `hero`
   - `you+join@…`: tag **landlord-operator**, `audience` = `landlord-operator`, `signup_source` = `join`
+  - `post_source` = `direct` on both (no `?src=` in the link)
   - a signup date/time is shown
+- [ ] **Post link:** open `aihousetour.com/?src=renter-reel`, sign up with `you+reel@…`, and check `post_source` = `renter-reel`.
 - [ ] Optional: turn on airplane mode, submit the form, and check that it says "Something went wrong. Please try again."
 - [ ] Delete the test subscribers from Kit when you're done.
 

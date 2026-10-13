@@ -546,6 +546,11 @@ h2{font-size:58px}
  *                  Sent as fields[signup_source]=hero (top of the page) | join (bottom of the page).
  *                  Set to '' to skip. The signup date/time is NOT sent: Kit stamps every subscriber itself.
  *
+ * KIT_POST_FIELD   Key of the Kit custom field that stores which post/link brought the visitor (we suggest 'post_source').
+ *                  Read from ?src= in the page URL (e.g. aihousetour.com/?src=renter-reel), sanitised to lowercase
+ *                  a-z, 0-9 and hyphens (max 40 chars), kept in sessionStorage for the visit.
+ *                  Sent as fields[post_source]=<src> | direct (no ?src). Set to '' to skip.
+ *
  * NO KEYS OF ANY KIND belong here. The public form endpoint needs no API key; never paste a Kit API secret
  * or a v4 API key (they start with kit_) into this page: anyone can read it with View Source.
  * ======================================================================================
@@ -560,6 +565,7 @@ h2{font-size:58px}
   };
   var KIT_AUDIENCE_FIELD = 'audience';        // TODO(kit): must match the custom field key in Kit exactly ('' = don't send)
   var KIT_SOURCE_FIELD = 'signup_source';     // TODO(kit): must match the custom field key in Kit exactly ('' = don't send)
+  var KIT_POST_FIELD = 'post_source';         // TODO(kit): must match the custom field key in Kit exactly ('' = don't send)
   /* ==================================== end of config ==================================== */
 
   var KIT_ENDPOINT = 'https://app.kit.com/forms/' + encodeURIComponent(KIT_FORM_ID) + '/subscriptions';
@@ -569,7 +575,25 @@ h2{font-size:58px}
   var EMAIL_RE = /^[^\s@]+@[^\s@.]+(\.[^\s@.]+)*\.[A-Za-z]{2,}$/;
   var warned = false;
 
-  // Sent: email address, renter / landlord-operator choice, and which form was used (hero / join).
+  // Post-level source: ?src=renter-reel -> 'renter-reel'. Sanitised, persisted for the session, 'direct' if absent.
+  var POST_SOURCE_KEY = 'htai_post_source';
+  function cleanSrc(v) {
+    return String(v || '').toLowerCase().replace(/[^a-z0-9-]/g, '').slice(0, 40);
+  }
+  function getPostSource() {
+    var fromUrl = '';
+    try { fromUrl = cleanSrc(new URLSearchParams(window.location.search).get('src')); } catch (e) {}
+    try {
+      if (fromUrl) { window.sessionStorage.setItem(POST_SOURCE_KEY, fromUrl); return fromUrl; }
+      var saved = cleanSrc(window.sessionStorage.getItem(POST_SOURCE_KEY));
+      if (saved) return saved;
+    } catch (e) { if (fromUrl) return fromUrl; }
+    return 'direct';
+  }
+  var POST_SOURCE = getPostSource();
+
+  // Sent: email address, renter / landlord-operator choice, which form was used (hero / join),
+  // and which post/link brought the visitor (?src=..., or 'direct').
   // This matches the privacy page; the signup time is recorded by Kit, not sent from here.
   function sendToKit(payload) {
     if (!KIT_READY) {
@@ -586,6 +610,7 @@ h2{font-size:58px}
     if (/^\d+$/.test(String(tag))) body.append('tags[]', String(tag));
     if (KIT_AUDIENCE_FIELD) body.append('fields[' + KIT_AUDIENCE_FIELD + ']', AUDIENCE_VALUE[payload.role] || payload.role);
     if (KIT_SOURCE_FIELD && payload.source) body.append('fields[' + KIT_SOURCE_FIELD + ']', payload.source);
+    if (KIT_POST_FIELD) body.append('fields[' + KIT_POST_FIELD + ']', payload.postSource || 'direct');
     // urlencoded body + Accept header only = a CORS "simple" request; Kit answers preflights with Access-Control-Allow-Origin: *.
     return fetch(KIT_ENDPOINT, { method: 'POST', headers: { 'Accept': 'application/json' }, body: body })
       .then(function (r) {
@@ -642,7 +667,7 @@ h2{font-size:58px}
       setInvalid(form, false);
       var role = (form.querySelector('input[name="role"]:checked') || {}).value || 'renter';
       var source = SOURCE_VALUE[wrap.getAttribute('data-source')] || '';
-      var payload = { email: email, role: role, source: source }; // role: 'renter' | 'landlord_operator'; source: 'hero' | 'join'
+      var payload = { email: email, role: role, source: source, postSource: POST_SOURCE }; // role: 'renter' | 'landlord_operator'; source: 'hero' | 'join'; postSource: ?src or 'direct'
       btn.disabled = true; wrap.setAttribute('aria-busy', 'true');
       sendToKit(payload).then(function (res) {
         if (res && res.confirmUrl) {
