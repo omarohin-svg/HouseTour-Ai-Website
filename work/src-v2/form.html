@@ -1,0 +1,20 @@
+<div class="wl" id="wl-{{ID}}" data-wl data-source="{{ID}}">
+          <form class="wl-form" action="#" method="post" novalidate aria-label="Join the waitlist">
+            <fieldset class="seg">
+              <legend class="sr">I am a</legend>
+              <label><input type="radio" name="role" value="renter" checked><svg width="16" height="16" aria-hidden="true"><use href="#i-user"/></svg>I'm a renter</label>
+              <label><input type="radio" name="role" value="landlord_operator"><svg width="16" height="16" aria-hidden="true"><use href="#i-bldg"/></svg>I own or manage rentals</label>
+            </fieldset>
+            <div class="row">
+              <label class="field"><svg width="18" height="18" aria-hidden="true"><use href="#i-mail"/></svg><span class="sr">Email address</span><input id="email-{{ID}}" type="email" name="email" placeholder="you@email.com" autocomplete="email" inputmode="email" aria-describedby="err-{{ID}}"></label>
+              <p class="err" id="err-{{ID}}" role="alert" hidden><svg width="16" height="16" aria-hidden="true"><use href="#i-alert"/></svg>Please enter a valid email.</p>
+              <button class="btn" type="submit">Join the waitlist<svg width="18" height="18" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+              <p class="err send-err" id="send-err-{{ID}}" role="alert" hidden><svg width="16" height="16" aria-hidden="true"><use href="#i-alert"/></svg>Something went wrong. Please try again.</p>
+            </div>
+            <p class="micro"><svg width="14" height="14" aria-hidden="true"><use href="#i-spark"/></svg><span>Early access in Toronto &amp; GTA. By joining, you agree to get email updates from HouseTour AI (Charter Residential). Unsubscribe anytime.</span></p>
+          </form>
+          <div class="wl-done" role="status" tabindex="-1" hidden>
+            <span class="done-ic"><svg width="24" height="24" aria-hidden="true"><use href="#i-check"/></svg></span>
+            <div><p class="done-h">You're on the list.</p><p class="done-p">Follow the build <b>@housetourai</b>.</p></div>
+          </div>
+        </div>

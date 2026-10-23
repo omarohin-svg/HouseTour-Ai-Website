@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en-CA" data-theme="{{THEME}}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>HouseTour AI · Meet Kira. Simplified rentals and house tours (in development)</title>
+<meta name="description" content="In development · Toronto &amp; GTA. Simplified rentals and house tours for renters and landlords. Verified renters tour in person, on your schedule, with Kira. Join the waitlist.">
+<link rel="icon" href="{{BASE}}assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="{{BASE}}assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="{{BASE}}assets/apple-touch-icon-180.png">
+<meta name="theme-color" content="#04060D">
+<!-- HouseTour AI homepage (dark v2). Built from src-v2/ by build.py into dark-v2/ and launch/; edit src-v2, not the output.
+     Waitlist posts to Kit ONLY once KIT_FORM_ID (config block at the top of the script) is set; while it is the TODO value the form is local-only (no network calls). -->
+<style>
+{{CSS}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-home" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V20h14V9.5"/><path d="M10 20v-5.5h4V20"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4.5 6v5.5c0 4.6 3.2 8.4 7.5 9.5 4.3-1.1 7.5-4.9 7.5-9.5V6L12 3Z"/><path d="m8.8 12.2 2.3 2.3 4.3-4.6"/></symbol>
+    <symbol id="i-cal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15.5" rx="3"/><path d="M3.5 10h17M8 3v4M16 3v4"/><path d="M8 14h2.5M13.5 14H16M8 17.2h2.5"/></symbol>
+    <symbol id="i-orb" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="12" cy="12" r="8.5"/><path d="M5.5 10.2c1.6-1.6 3.9-2.4 6.5-2.4s4.9.8 6.5 2.4c-.2 2.6-3.1 4.2-6.5 4.2s-6.3-1.6-6.5-4.2Z"/><path d="M10.6 12.2c.8.6 2 .6 2.8 0"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5.5" width="18" height="13" rx="3"/><path d="m4 7.5 8 5.5 8-5.5"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5c.5 4.6 2.4 7 7.5 9.5-5.1 2.5-7 4.9-7.5 9.5-.5-4.6-2.4-7-7.5-9.5 5.1-2.5 7-4.9 7.5-9.5Z"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="12" cy="8.5" r="3.8"/><path d="M4.8 20c.9-3.6 3.8-5.6 7.2-5.6s6.3 2 7.2 5.6"/></symbol>
+    <symbol id="i-bldg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20.5V5.5L12 3v17.5M12 9h8v11.5M2.5 20.5h19"/><path d="M7.5 8.5v.01M7.5 12v.01M7.5 15.5v.01M15.5 12.5v.01M15.5 16v.01"/></symbol>
+    <symbol id="i-upload" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15V4M7.5 8.5 12 4l4.5 4.5"/><path d="M4 15v3a2.5 2.5 0 0 0 2.5 2.5h11A2.5 2.5 0 0 0 20 18v-3"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8.2 12.3 2.6 2.6 5-5.4"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-dollar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M14.8 9.2c-.5-.9-1.5-1.4-2.8-1.4-1.6 0-2.8.8-2.8 2.1 0 3 5.8 1.5 5.8 4.4 0 1.3-1.3 2.1-3 2.1-1.4 0-2.5-.6-3-1.6M12 6.2v1.6M12 16.4V18"/></symbol>
+    <symbol id="i-bolt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M13 3 5 13.5h6L10 21l9-11h-6l0-7Z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-6.5-5.8-6.5-11a6.5 6.5 0 0 1 13 0c0 5.2-6.5 11-6.5 11Z"/><circle cx="12" cy="10" r="2.3"/></symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5.5M12 16.4v.1"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.5V12l3 2"/></symbol>
+    <symbol id="i-id" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="19" height="14" rx="3"/><circle cx="8.5" cy="11" r="2.2"/><path d="M5.3 16c.6-1.6 1.8-2.4 3.2-2.4s2.6.8 3.2 2.4M14.5 10h4M14.5 13.5h3"/></symbol>
+    <symbol id="i-door" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 21V4.5A1.5 1.5 0 0 1 7.5 3h9A1.5 1.5 0 0 1 18 4.5V21M3.5 21h17"/><path d="M14.5 12.5v.01"/></symbol>
+    <symbol id="i-key" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="15" r="4.5"/><path d="m11.2 11.8 8.3-8.3M16.5 6.5l2.5 2.5M14 9l2 2"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 11.5c0 4.1-3.8 7.5-8.5 7.5-1.2 0-2.3-.2-3.3-.6L4 20l1.2-3.6C4.1 15 3.5 13.3 3.5 11.5 3.5 7.4 7.3 4 12 4s8.5 3.4 8.5 7.5Z"/><path d="M8.5 11.5h.01M12 11.5h.01M15.5 11.5h.01"/></symbol>
+  </defs>
+</svg>
+
+{{NAV}}
+
+<main id="top">
+  <section class="hero hero3">
+    <div class="grid"></div>
+    <div class="wrap">
+      <div class="hero-copy">
+        <span class="pill eyebrow"><span class="dot"></span>In development <span class="sep">·</span> Toronto &amp; GTA</span>
+        <h1>Meet <span class="k">Kira.</span></h1>
+        <p class="sub">Simplified rentals and house tours for renters and landlords.</p>
+        <p class="sub2">Tour on your schedule. No landlord needed on site.</p>
+        <div class="choose">
+          <a class="ch ch-rent" href="#join" data-role="renter"><span class="ic"><svg width="22" height="22" aria-hidden="true"><use href="#i-search"/></svg></span><b>I'm renting</b><small>Find and tour homes</small><svg class="go" width="20" height="20" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <a class="ch ch-own" href="landlords/"><span class="ic"><svg width="22" height="22" aria-hidden="true"><use href="#i-key"/></svg></span><b>I own or manage rentals</b><small>For landlords and property managers</small><svg class="go" width="20" height="20" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+        <ul class="trust">
+          <li><svg width="18" height="18" aria-hidden="true"><use href="#i-check"/></svg>ID verified</li>
+          <li><svg width="18" height="18" aria-hidden="true"><use href="#i-check"/></svg>You approve</li>
+          <li><svg width="18" height="18" aria-hidden="true"><use href="#i-check"/></svg>Kira answers</li>
+        </ul>
+      </div>
+      <div class="stage" aria-hidden="false">
+        <div class="ring r3"></div><div class="ring r2"></div><div class="halo"></div><div class="ring r1"></div>
+        <div class="floor"></div>
+        <img class="kira" src="{{BASE}}assets/kira.png" alt="Kira, the HouseTour AI guide: a white glossy sphere with a black visor and a glowing blue smile" width="1200" height="1200">
+        <div class="tag t1"><span class="ic"><svg width="18" height="18"><use href="#i-shield"/></svg></span><span><small>Before every tour</small>Renter verified</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="how3" id="how">
+    <div class="wrap">
+      <h2>How it works</h2>
+      <ol class="icons5">
+        <li><span class="ic"><svg width="26" height="26" aria-hidden="true"><use href="#i-home"/></svg></span><b>Pick a home</b></li>
+        <li><span class="ic"><svg width="26" height="26" aria-hidden="true"><use href="#i-id"/></svg></span><b>Verify ID</b></li>
+        <li><span class="ic"><svg width="26" height="26" aria-hidden="true"><use href="#i-user"/></svg></span><b>About you</b></li>
+        <li><span class="ic"><svg width="26" height="26" aria-hidden="true"><use href="#i-check"/></svg></span><b>Get approved</b></li>
+        <li><span class="ic"><svg width="26" height="26" aria-hidden="true"><use href="#i-orb"/></svg></span><b>Tour with Kira</b></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="ask3" id="renters">
+    <div class="wrap">
+      <div class="ask">
+        <img src="{{BASE}}assets/kira.png" alt="" width="150" height="150">
+        <span class="q">Ask Kira anything</span>
+        <div class="chips">
+          <span class="chip"><svg width="18" height="18"><use href="#i-dollar"/></svg>Rent</span>
+          <span class="chip"><svg width="18" height="18"><use href="#i-bolt"/></svg>Utilities</span>
+          <span class="chip"><svg width="18" height="18"><use href="#i-pin"/></svg>The neighbourhood</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="join" id="join">
+    <div class="wrap">
+      <div class="box">
+        <span class="pill"><span class="dot"></span>In development <span class="sep">·</span> Toronto &amp; GTA</span>
+        <h2>Join the waitlist.</h2>
+        {{FORM_JOIN}}
+      </div>
+    </div>
+  </section>
+</main>
+
+{{FOOTER}}
+<script>
+{{JS}}
+</script>
+</body>
+</html>

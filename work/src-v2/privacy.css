@@ -1,0 +1,30 @@
+/* ---------- privacy page ---------- */
+.legal{position:relative;overflow:hidden;padding:148px 0 120px}
+.legal .wrap{position:relative;z-index:1;max-width:920px}
+.legal-glow{position:absolute;left:50%;top:-340px;width:1100px;height:700px;transform:translateX(-50%);background:var(--panel-glow-top);opacity:.75;pointer-events:none}
+.legal-head h1{font-size:56px;margin:20px 0 22px;max-width:760px}
+.legal-head .lede{font-size:19px;line-height:1.6;color:var(--muted);max-width:640px}
+.legal-head .updated{margin:0 0 22px;font-size:14px;color:var(--muted)}
+.legal-list{margin-top:56px;border-top:1px solid var(--line)}
+.legal-list .item{display:grid;grid-template-columns:260px 1fr;gap:40px;padding:28px 0;border-bottom:1px solid var(--line)}
+.legal-list h2{font-size:21px;letter-spacing:-.02em;line-height:1.35}
+.legal-list p,.legal-list li{font-size:17px;line-height:1.65;color:var(--muted)}
+.legal-list p + p,.legal-list p + ul{margin-top:12px}
+.legal-list ul{margin:0;padding:0;list-style:none}
+.legal-list li{position:relative;padding-left:22px;margin-top:8px}
+.legal-list li::before{content:"";position:absolute;left:2px;top:.68em;width:7px;height:7px;border-radius:50%;background:var(--kira);box-shadow:0 0 10px rgba(53,154,231,.7)}
+.legal-list a,.legal .back a{color:var(--text);text-decoration:underline;text-decoration-color:rgba(255,255,255,.3);text-underline-offset:3px}
+.legal-list a:hover,.legal .back a:hover{text-decoration-color:var(--kira)}
+.legal a:focus-visible{outline:2px solid var(--focus-outline);outline-offset:3px;border-radius:4px}
+.legal .back{margin-top:40px;font-size:15px}
+.foot-links a[aria-current="page"]{text-decoration-color:var(--kira)}
+@media (max-width:760px){
+  .legal{padding:104px 0 80px}
+  .legal-head h1{font-size:36px;margin:16px 0 16px}
+  .legal-head .lede{font-size:17px}
+  .legal-list{margin-top:40px}
+  .legal-list .item{grid-template-columns:1fr;gap:8px;padding:22px 0}
+  .legal-list h2{font-size:19px}
+  .legal-list p,.legal-list li{font-size:16px}
+  .legal-glow{width:640px;height:520px;top:-300px}
+}
