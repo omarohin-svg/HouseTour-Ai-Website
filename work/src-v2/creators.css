@@ -1,0 +1,90 @@
+/* ---------- creators page (/creators/): thin layer on top of the live landlords.css (.lp hero, .lp-kira, .lp-chips, .lp-join panel) ---------- */
+.cr h1 .k{background:var(--k-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.cr h1{font-size:42px;line-height:1.04}
+.cr-tag{gap:7px}
+.cr-tag svg{color:var(--kira-hi)}
+.btn svg.down,.cr-step .go.down{transform:rotate(90deg)}
+/* Kira: shown on phones too (landlords hides it), smaller and centred */
+.cr .cr-kira{display:flex;position:relative;align-items:center;justify-content:center;width:176px;aspect-ratio:1/1;margin:30px auto 0}
+.cr-kira .halo{position:absolute;inset:-8%;border-radius:50%;background:var(--halo)}
+.cr-kira .ring{position:absolute;border-radius:50%;border:1px solid var(--ring)}
+.cr-kira .r1{inset:2%}.cr-kira .r2{inset:-14%;opacity:.5}
+.cr-kira img{position:relative;width:84%;height:auto;filter:var(--kira-filter)}
+/* what we're asking */
+.cr-ask{margin-top:16px;gap:10px}
+.cr-ask li{padding:11px 16px;font-size:16px}
+/* grow card */
+.cr-grow{display:flex;align-items:flex-start;gap:14px;margin-top:18px;padding:20px;border-radius:22px;background:linear-gradient(160deg,rgba(53,154,231,.18),rgba(53,154,231,.04));border:1px solid var(--line-hi);box-shadow:var(--tag-shadow)}
+.cr-grow .ic{flex:none;width:48px;height:48px;border-radius:15px;display:grid;place-items:center;background:var(--btn-bg);color:var(--btn-text)}
+.cr-grow h3{font-family:"Sora",sans-serif;font-size:22px;font-weight:700;letter-spacing:-.03em;line-height:1.15;padding-top:2px}
+.cr-grow p{margin-top:8px;font-size:16px;line-height:1.55;color:var(--muted);text-wrap:pretty}
+/* founding creator perks */
+.cr-perks{margin-top:10px;padding:18px 20px;border-radius:20px;background:var(--card-hi);border:1px solid var(--line-hi)}
+.cr-perks h3{font-family:"Sora",sans-serif;font-size:18px;font-weight:600;letter-spacing:-.02em}
+.cr-perks ul{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:10px}
+.cr-perks li{display:flex;align-items:center;gap:12px;font-size:16.5px;font-weight:600;line-height:1.35;color:var(--text)}
+.cr-perks li svg{flex:none;color:var(--kira-hi)}
+/* steps */
+.cr-steps{list-style:none;margin:18px 0 0;padding:0;display:grid;gap:8px}
+.cr-steps li{margin:0}
+.cr-step{display:flex;align-items:center;gap:14px;padding:14px 16px;border-radius:18px;background:var(--glass);border:1px solid var(--line);box-shadow:var(--tag-shadow);color:var(--text);text-decoration:none;transition:border-color .15s,background .15s}
+.cr-step:hover{border-color:var(--line-hi);background:rgba(53,154,231,.08)}
+.cr-step:focus-visible{outline:2px solid var(--focus-outline);outline-offset:3px}
+.cr-step .n{flex:none;width:32px;height:32px;border-radius:50%;display:grid;place-items:center;background:var(--btn-bg);color:var(--btn-text);font-family:"Sora",sans-serif;font-size:14px;font-weight:700}
+.cr-step .t{flex:1;min-width:0;font-family:"Sora",sans-serif;font-weight:600;font-size:19px;letter-spacing:-.02em;line-height:1.3}
+.cr-step .go{flex:none;color:var(--kira)}
+/* form inside the landlord-style join panel */
+.cr-join h2{text-wrap:balance}
+.cr-wl{margin-top:22px;padding:16px 12px 10px;border-radius:22px;text-align:left;scroll-margin-top:84px}
+.cr-form .q{margin:0 0 18px;padding:0;border:0;min-width:0}
+.cr-form .ql{display:block;padding:0;margin:0 4px 8px;font-size:15.5px;font-weight:600;color:var(--text)}
+.cr-form .opt{margin-left:6px;font-weight:500;font-size:12.5px;color:var(--muted)}
+.cr-form .field{height:52px}
+.cr-form .field .at{flex:none;font-size:15px;font-weight:600;color:var(--muted)}
+.cr-form .err{margin:8px 6px 0}
+.cr-seg{grid-template-columns:repeat(2,1fr)!important}
+.cr-seg.c3{grid-template-columns:1fr 1fr 1fr!important}
+.cr-seg label{height:48px!important;font-size:15px!important;white-space:normal;text-align:center;line-height:1.2;padding:0 6px}
+.cr-seg.c3 label{font-size:14px!important}
+.cr-seg label:has(input:focus-visible){outline:2px solid var(--focus-outline);outline-offset:2px;color:var(--text)}
+.q.is-invalid .seg{box-shadow:0 0 0 1px var(--err-line),0 0 0 4px var(--err-ring)}
+/* tap chips: same look as the landlord .lp-chips, selectable */
+.cr-chips{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.cr-chips label{position:relative;display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 16px;border-radius:999px;background:var(--card-hi);border:1px solid var(--line-hi);font-size:15px;font-weight:600;color:var(--text);cursor:pointer;white-space:nowrap;transition:background .15s,border-color .15s}
+.cr-chips input{position:absolute;opacity:0;width:1px;height:1px;margin:0}
+.cr-chips label:hover{border-color:var(--kira)}
+.cr-chips label:has(input:checked){background:var(--btn-bg);border-color:transparent;color:var(--btn-text);box-shadow:0 0 22px -6px rgba(53,154,231,.8)}
+.cr-chips label:has(input:focus-visible){outline:2px solid var(--focus-outline);outline-offset:2px}
+.q.is-invalid .cr-chips label{border-color:var(--err-line)}
+.cr-links{display:grid;gap:8px}
+.cr-checks{display:grid;gap:12px;margin-top:4px!important}
+.check{position:relative;display:flex;align-items:flex-start;gap:12px;padding:4px;font-size:15px;line-height:1.5;color:var(--text);cursor:pointer}
+.check input{position:absolute;opacity:0;width:1px;height:1px}
+.check .cb{flex:none;width:22px;height:22px;margin-top:1px;border-radius:7px;border:1.5px solid var(--input-line);background:var(--input-bg);display:grid;place-items:center}
+.check input:checked + .cb{background:var(--kira);border-color:var(--kira)}
+.check input:checked + .cb::after{content:"";width:6px;height:11px;margin-top:-2px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg)}
+.check input:focus-visible + .cb{outline:2px solid var(--focus-outline);outline-offset:2px}
+.is-invalid .check .cb{border-color:var(--err-line);box-shadow:0 0 0 4px var(--err-ring)}
+.cr-submit{width:100%;height:56px;margin-top:6px;font-size:17px}
+.cr-form .send-err{margin-top:10px}
+.cr-form .micro a{color:var(--text);text-decoration:underline;text-decoration-color:rgba(255,255,255,.3);text-underline-offset:3px}
+.cr-wl .wl-done{min-height:0;padding:20px 12px}
+.cr-alt{position:relative;margin-top:20px;font-size:16px;color:var(--muted)}
+.cr-alt a{color:var(--text);font-weight:600;text-decoration:underline;text-decoration-color:var(--kira);text-underline-offset:3px}
+.cr-alt a:focus-visible{outline:2px solid var(--focus-outline);outline-offset:3px;border-radius:4px}
+@media (min-width:761px){
+  .cr h1{font-size:64px}
+  .cr .cr-kira{width:100%;max-width:380px;margin:0;justify-self:end}
+  .cr-kira .halo{inset:-6%}.cr-kira .r1{inset:4%}.cr-kira .r2{inset:-12%}
+  .cr .lp-sec .wrap > *{max-width:820px}
+  .cr-ask li{font-size:17px;padding:12px 18px}
+  .cr-grow{padding:28px 30px}
+  .cr-grow .ic{width:56px;height:56px}
+  .cr-grow h3{font-size:30px}
+  .cr-grow p{font-size:17px}
+  .cr-perks{padding:22px 30px}
+  .cr-perks ul{grid-template-columns:repeat(3,1fr);gap:16px}
+  .cr-steps{grid-template-columns:1fr 1fr;gap:12px}
+  .cr-step{padding:18px 22px}
+  .cr-wl{padding:26px 26px 14px;border-radius:28px;max-width:600px;margin-left:auto;margin-right:auto}
+}

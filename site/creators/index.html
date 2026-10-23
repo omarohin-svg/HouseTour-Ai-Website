@@ -1,0 +1,1050 @@
+<!doctype html>
+<html lang="en-CA" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Collaborate with HouseTour AI</title>
+<meta name="description" content="Collaborate with HouseTour AI: short, natural Reels about the Toronto rental hunt, paid in CAD. Apply in a few minutes.">
+<link rel="canonical" href="https://aihousetour.com/creators/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="HouseTour AI">
+<meta property="og:title" content="Collaborate with HouseTour AI">
+<meta property="og:description" content="Short, natural Reels about the Toronto rental hunt, paid in CAD.">
+<meta property="og:url" content="https://aihousetour.com/creators/">
+<meta property="og:image" content="https://aihousetour.com/assets/kira.png">
+<meta property="og:image:alt" content="Kira, the HouseTour AI guide: a white glossy sphere with a black visor and a glowing blue smile">
+<meta property="og:locale" content="en_CA">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Collaborate with HouseTour AI">
+<meta name="twitter:description" content="Short, natural Reels about the Toronto rental hunt, paid in CAD.">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon-180.png">
+<meta name="theme-color" content="#04060D">
+<!-- HouseTour AI creators page (dark v2). Built from src-v2/creators.html by build.py into dark-v2/creators/ and launch/creators/; edit src-v2, not the output.
+     Served at /creators/ on GitHub Pages; all paths are relative (../assets/, ../).
+     Our own HTML form posts (fetch, urlencoded) to the public Kit form 'Creator applications' (10084828); no Kit embed/JS, no keys. Config block at the top of the script. -->
+<style>
+@font-face{font-family:"Sora";src:url("../assets/fonts/Sora.ttf") format("truetype");font-weight:100 800;font-display:swap}
+@font-face{font-family:"Inter";src:url("../assets/fonts/Inter.ttf") format("truetype");font-weight:100 900;font-display:swap}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"Inter",system-ui,sans-serif;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:"Sora","Inter",sans-serif;margin:0;letter-spacing:-.035em;line-height:1.04;font-weight:600}
+p{margin:0}
+.wrap{max-width:1280px;margin:0 auto;padding:0 56px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ---------- nav ---------- */
+.nav{position:absolute;top:0;left:0;right:0;z-index:5}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:88px}
+.brand{display:flex;align-items:center;gap:12px;font-family:"Sora";font-weight:600;font-size:19px;letter-spacing:-.02em;color:var(--text)}
+.brand img{width:34px;height:auto}
+.brand b{font-weight:600;color:var(--brand-ai)}
+.nav-links{display:flex;align-items:center;gap:36px;font-size:15px;color:var(--muted)}
+.nav-links a:hover{color:var(--text)}
+.nav-right{display:flex;align-items:center;gap:14px}
+.pill{display:inline-flex;align-items:center;gap:10px;height:34px;padding:0 14px;border-radius:999px;border:1px solid var(--pill-line);background:var(--pill-bg);font-size:13px;font-weight:500;color:var(--text);white-space:nowrap;letter-spacing:.01em}
+.pill .dot{width:7px;height:7px;border-radius:50%;background:var(--kira);box-shadow:0 0 0 4px var(--dot-ring),0 0 12px var(--kira)}
+.pill .sep{opacity:.45}
+.btn-sm{height:40px;padding:0 18px;border-radius:999px;display:inline-flex;align-items:center;font-size:14px;font-weight:600;background:var(--btn-bg);color:var(--btn-text);box-shadow:var(--btn-shadow)}
+
+/* ---------- hero ---------- */
+.hero{position:relative;overflow:hidden;padding-top:88px}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.02fr) minmax(0,1fr);align-items:center;gap:24px;min-height:calc(900px - 88px);padding-bottom:40px}
+.hero-copy{position:relative;z-index:3;padding-bottom:8px}
+.hero h1{font-size:68px;margin:26px 0 22px;max-width:640px}
+.hero h1 .k{background:var(--k-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .sub{font-size:19px;line-height:1.6;color:var(--muted);max-width:540px}
+.hero .sub strong{color:var(--text);font-weight:600}
+
+.stage{position:relative;z-index:2;display:flex;align-items:center;justify-content:center;aspect-ratio:1/1;width:100%;max-width:660px;justify-self:end;margin-right:-24px}
+.stage .halo{position:absolute;inset:-6%;border-radius:50%;background:var(--halo)}
+.stage .ring{position:absolute;border-radius:50%;border:1px solid var(--ring)}
+.stage .r1{inset:4%}
+.stage .r2{inset:-10%;opacity:.6}
+.stage .r3{inset:-24%;opacity:.35}
+.stage .floor{position:absolute;left:18%;right:18%;bottom:4%;height:9%;border-radius:50%;background:var(--floor);filter:blur(14px)}
+.stage .kira{position:relative;width:90%;height:auto;filter:var(--kira-filter)}
+.stage .tag{position:absolute;display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:14px;background:var(--glass);border:1px solid var(--line);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);font-size:13px;color:var(--text);box-shadow:var(--tag-shadow);white-space:nowrap}
+.stage .tag small{display:block;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600;line-height:1.3}
+.stage .tag .ic{width:30px;height:30px;border-radius:9px;display:grid;place-items:center;background:var(--ic-bg);color:var(--kira)}
+.stage .t1{left:-6%;top:3%}
+.stage .t2{right:-3%;bottom:-3%}
+
+/* ---------- waitlist form ---------- */
+.wl{margin-top:34px;max-width:560px;padding:10px;border-radius:24px;background:var(--card);border:1px solid var(--line);box-shadow:var(--card-shadow);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
+.seg{display:grid;grid-template-columns:1fr 1.45fr;gap:4px;padding:4px;margin:0;border:0;border-radius:16px;background:var(--seg-bg)}
+.seg label{position:relative;display:flex;align-items:center;justify-content:center;gap:8px;height:42px;border-radius:12px;font-size:14px;font-weight:500;color:var(--muted);cursor:pointer;white-space:nowrap}
+.seg input{position:absolute;opacity:0;pointer-events:none}
+.seg label:has(input:checked){background:var(--seg-on);color:var(--text);box-shadow:var(--seg-shadow)}
+.seg label:has(input:checked) svg{color:var(--kira)}
+.seg label:has(input:focus-visible){outline:2px solid var(--kira);outline-offset:2px}
+.wl .row{display:flex;gap:8px;margin-top:8px}
+.field{flex:1;display:flex;align-items:center;gap:10px;height:56px;padding:0 16px;border-radius:16px;background:var(--input-bg);border:1px solid var(--input-line);color:var(--muted)}
+.field input{flex:1;min-width:0;height:100%;border:0;outline:0;background:transparent;color:var(--text);font:inherit;font-size:16px}
+.field input::placeholder{color:var(--placeholder)}
+.field:focus-within{border-color:var(--kira);box-shadow:0 0 0 4px var(--focus)}
+.btn{height:56px;padding:0 26px;border:0;border-radius:16px;display:inline-flex;align-items:center;justify-content:center;gap:10px;font:inherit;font-size:16px;font-weight:600;letter-spacing:-.005em;cursor:pointer;background:var(--btn-bg);color:var(--btn-text);box-shadow:var(--btn-shadow);white-space:nowrap}
+.micro{display:flex;align-items:center;gap:8px;padding:12px 8px 4px;font-size:13px;color:var(--muted)}
+.micro svg{color:var(--kira);flex:none}
+
+/* ---------- sections ---------- */
+section{position:relative}
+.sec{padding:120px 0}
+.label{display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--kira-text)}
+.label::before{content:"";width:22px;height:1px;background:currentColor}
+h2{font-size:58px}
+.lead{font-size:20px;line-height:1.6;color:var(--muted);max-width:520px}
+
+/* how */
+.how .head{display:flex;align-items:flex-end;justify-content:space-between;gap:40px;margin-bottom:72px}
+.how h2{margin-top:20px}
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:20px;counter-reset:s}
+.step{position:relative;padding:30px 28px 34px;border-radius:24px;background:var(--card);border:1px solid var(--line);min-height:280px;display:flex;flex-direction:column}
+.step .n{font-family:"Sora";font-size:14px;font-weight:500;color:var(--muted);letter-spacing:.06em}
+.step .ic{margin-top:44px;width:52px;height:52px;border-radius:16px;display:grid;place-items:center;background:var(--ic-bg);color:var(--kira);box-shadow:var(--ic-glow)}
+.step h3{margin-top:auto;padding-top:28px;font-size:26px;letter-spacing:-.03em}
+.step p{margin-top:10px;font-size:15px;line-height:1.55;color:var(--muted);min-height:3.1em}
+.step:not(:last-child)::after{content:"";position:absolute;top:44px;right:-15px;width:10px;height:10px;border-top:1.5px solid var(--kira);border-right:1.5px solid var(--kira);transform:rotate(45deg);opacity:.7}
+.step.last{background:var(--card-hi);border-color:var(--line-hi)}
+
+/* split sections */
+.split .wrap{display:grid;grid-template-columns:1fr 1fr;gap:96px;align-items:center}
+.split h2{margin:22px 0 26px}
+.split.flip .copy{order:2}
+.visual{position:relative;border-radius:32px;background:var(--panel);border:1px solid var(--line);aspect-ratio:1.08/1;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.visual::before{content:"";position:absolute;inset:0;background:var(--panel-glow)}
+/* renters visual */
+.ask{position:relative;display:flex;flex-direction:column;align-items:center;gap:26px;width:78%}
+.ask img{width:150px;filter:var(--kira-filter-sm)}
+.ask .q{font-family:"Sora";font-size:15px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.chips{display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
+.chip{display:inline-flex;align-items:center;gap:10px;height:52px;padding:0 22px;border-radius:999px;background:var(--glass);border:1px solid var(--line);font-size:17px;font-weight:500;box-shadow:var(--tag-shadow)}
+.chip svg{color:var(--kira)}
+.schedule{display:inline-flex;align-items:center;gap:10px;font-size:14px;color:var(--muted)}
+.schedule b{color:var(--text);font-weight:600}
+/* landlord visual */
+.flow{position:relative;display:flex;flex-direction:column;gap:14px;width:76%}
+.flow .it{display:flex;align-items:center;gap:16px;padding:20px 22px;border-radius:20px;background:var(--glass);border:1px solid var(--line);box-shadow:var(--tag-shadow);font-size:17px;font-weight:500}
+.flow .it .ic{flex:none;width:44px;height:44px;border-radius:13px;display:grid;place-items:center;background:var(--ic-bg);color:var(--kira)}
+.flow .it .ok{margin-left:auto;color:var(--kira)}
+.flow .it.k{background:var(--card-hi);border-color:var(--line-hi)}
+.flow .it.k img{width:44px;flex:none}
+.flow .conn{width:1px;height:18px;margin:-8px 0 -8px 44px;background:linear-gradient(var(--kira),transparent)}
+
+/* tagline */
+.tagline{padding:170px 0;text-align:center;overflow:hidden}
+.tagline::before{content:"";position:absolute;left:50%;top:0;bottom:0;width:1200px;transform:translateX(-50%);background:var(--tag-glow);pointer-events:none}
+.tagline .eye{position:relative;width:76px;margin:0 auto 36px;filter:var(--kira-filter-sm)}
+.tagline h2{position:relative;font-size:104px;letter-spacing:-.045em;line-height:1}
+.tagline h2 .v{background:var(--k-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* bottom waitlist */
+.join{padding:40px 0 140px}
+.join .box{position:relative;overflow:hidden;border-radius:40px;padding:84px 56px 80px;background:var(--panel);border:1px solid var(--line);text-align:center}
+.join .box::before{content:"";position:absolute;left:50%;top:-40%;width:1000px;height:700px;transform:translateX(-50%);border-radius:50%;background:var(--panel-glow-top);pointer-events:none}
+.join .box > *{position:relative}
+.join h2{font-size:60px;margin:26px 0 0}
+.join .wl{margin:40px auto 0;text-align:left}
+
+/* footer */
+.foot{border-top:1px solid var(--line);padding:40px 0 48px}
+.foot .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;font-size:14px;color:var(--muted)}
+.foot .brand{font-size:17px}
+.foot .brand img{width:30px}
+.foot .follow b{color:var(--text);font-weight:600}
+.foot .follow .sep{margin:0 10px;opacity:.5}
+
+/* ---------- responsive ---------- */
+@media (max-width:1100px){
+  .nav-links{display:none}
+  .hero h1{font-size:56px}
+  h2{font-size:46px}
+  .steps{grid-template-columns:repeat(2,1fr)}
+  .step:nth-child(2)::after{display:none}
+  .split .wrap{gap:56px}
+  .tagline h2{font-size:78px}
+}
+@media (max-width:760px){
+  body{font-size:16px}
+  .wrap{padding:0 20px}
+  .nav .wrap{height:68px}
+  .brand{font-size:17px;gap:10px}
+  .brand img{width:28px}
+  .nav .nav-right{display:none}
+  .nav .pill{height:30px;font-size:12px;padding:0 12px}
+  .hero{padding-top:68px}
+  .hero .wrap{grid-template-columns:1fr;min-height:0;gap:0;padding-bottom:56px}
+  .stage{order:-1;width:212px;justify-self:center;margin:6px auto 0}
+  .stage .kira{width:92%}
+  .stage .tag{display:none}
+  .stage .r3{inset:-18%}
+  .hero-copy{text-align:left}
+  .hero .eyebrow{margin-top:12px}
+  .hero h1{font-size:38px;margin:16px 0 14px;letter-spacing:-.04em}
+  .hero .sub{font-size:16px;line-height:1.55}
+  .wl{margin-top:22px;padding:8px;border-radius:20px}
+  .seg{grid-template-columns:1fr 1.5fr}
+  .seg label{font-size:13px;height:40px;gap:6px}
+  .seg label svg{display:none}
+  .wl .row{flex-direction:column}
+  .field,.btn{height:52px;flex:none}
+  .btn{width:100%}
+  .sec{padding:96px 0}
+  h2{font-size:36px}
+  .lead{font-size:17px}
+  .how .head{display:block;margin-bottom:40px}
+  .steps{grid-template-columns:1fr;gap:12px}
+  .step{min-height:0;padding:22px 22px;display:grid;grid-template-columns:52px 1fr;column-gap:18px;align-items:center}
+  .step .n{grid-column:1/-1;margin-bottom:14px}
+  .step .ic{margin-top:0}
+  .step h3{padding-top:0;margin-top:0;font-size:22px}
+  .step p{grid-column:2;margin-top:6px;min-height:0}
+  .step::after{display:none}
+  .split .wrap{grid-template-columns:1fr;gap:44px}
+  .split.flip .copy{order:0}
+  .visual{border-radius:24px;aspect-ratio:auto;padding:44px 0}
+  .ask{width:88%;gap:20px}
+  .ask img{width:110px}
+  .chip{height:46px;padding:0 18px;font-size:15px}
+  .flow{width:88%}
+  .flow .it{padding:16px;font-size:15px;gap:14px}
+  .flow .it .ic,.flow .it.k img{width:38px;height:38px}
+  .tagline{padding:110px 0}
+  .tagline .eye{width:60px;margin-bottom:28px}
+  .tagline h2{font-size:46px}
+  .tagline::before{width:700px}
+  .join{padding:8px 0 88px}
+  .join .box{padding:52px 12px 12px;border-radius:28px}
+  .join h2{font-size:36px}
+  .join .wl{margin-top:30px}
+  .foot .wrap{flex-direction:column;align-items:flex-start;gap:14px}
+  .foot .follow .sep{display:none}
+  .foot .follow span{display:block}
+}
+
+/* theme */
+:root{
+  --bg:#04060D; --text:#F3F6FB; --muted:#93A0B4; --placeholder:#5E6A7E;
+  --kira:#359AE7; --kira-hi:#7BECFD; --kira-deep:#0253BB; --kira-text:#6CC2F5; --brand-ai:#59B4F0;
+  --line:rgba(255,255,255,.08); --line-hi:rgba(53,154,231,.38);
+  --pill-line:rgba(53,154,231,.32); --pill-bg:rgba(53,154,231,.08); --dot-ring:rgba(53,154,231,.18);
+  --btn-bg:linear-gradient(180deg,#5AB2F0 0%,#359AE7 55%,#2286D8 100%); --btn-text:#03111F;
+  --btn-shadow:0 0 0 1px rgba(123,236,253,.35) inset,0 10px 30px -8px rgba(53,154,231,.75),0 0 60px -10px rgba(53,154,231,.6);
+  --k-grad:linear-gradient(100deg,#9BEFFF 0%,#59B4F0 45%,#359AE7 100%);
+  --halo:radial-gradient(closest-side,rgba(53,154,231,.42),rgba(53,154,231,.12) 55%,rgba(53,154,231,0) 100%);
+  --ring:rgba(123,200,245,.16);
+  --floor:radial-gradient(closest-side,rgba(53,154,231,.85),rgba(53,154,231,0));
+  --kira-filter:drop-shadow(0 0 40px rgba(53,154,231,.45)) drop-shadow(0 30px 60px rgba(0,0,0,.6));
+  --kira-filter-sm:drop-shadow(0 0 24px rgba(53,154,231,.55));
+  --glass:rgba(16,22,36,.62); --tag-shadow:0 20px 40px -20px rgba(0,0,0,.8); --ic-bg:rgba(53,154,231,.14); --ic-glow:0 0 30px -6px rgba(53,154,231,.6);
+  --card:rgba(255,255,255,.035); --card-hi:linear-gradient(180deg,rgba(53,154,231,.16),rgba(53,154,231,.04)); --card-shadow:0 40px 80px -40px rgba(0,0,0,.9),0 0 0 1px rgba(255,255,255,.02) inset;
+  --seg-bg:rgba(255,255,255,.04); --seg-on:rgba(53,154,231,.18); --seg-shadow:0 0 0 1px rgba(53,154,231,.45) inset;
+  --input-bg:rgba(0,0,0,.35); --input-line:rgba(255,255,255,.09); --focus:rgba(53,154,231,.25);
+  --panel:linear-gradient(180deg,#0A1020 0%,#060912 100%);
+  --panel-glow:radial-gradient(60% 55% at 50% 45%,rgba(53,154,231,.20),rgba(53,154,231,0));
+  --panel-glow-top:radial-gradient(closest-side,rgba(53,154,231,.30),rgba(53,154,231,0));
+  --tag-glow:radial-gradient(closest-side,rgba(53,154,231,.22),rgba(53,154,231,0));
+}
+.hero::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background:
+    radial-gradient(900px 700px at 74% 46%,rgba(53,154,231,.20),rgba(53,154,231,0) 70%),
+    radial-gradient(1200px 500px at 50% 0%,rgba(40,70,130,.18),rgba(0,0,0,0) 70%);}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:linear-gradient(90deg,transparent,rgba(53,154,231,.45),transparent)}
+.hero .grid{position:absolute;inset:0;pointer-events:none;opacity:.5;
+  background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);
+  background-size:80px 80px;-webkit-mask-image:radial-gradient(700px 520px at 74% 48%,#000,transparent 75%);mask-image:radial-gradient(700px 520px at 74% 48%,#000,transparent 75%)}
+.tagline{background:none}
+
+/* ---------- v2 additions ---------- */
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+:root{--err:#FF8A8A;--err-line:rgba(255,122,122,.75);--err-ring:rgba(255,122,122,.18);--focus-outline:#9FD8FF}
+.brand img{width:36px;height:36px;margin-top:-3px}
+.foot .brand img{width:32px;height:32px;margin-top:-3px}
+.btn-sm .sm{display:none}
+.btn-sm{border:0;cursor:pointer}
+
+/* focus states (keyboard-visible) */
+.btn:focus-visible,.btn-sm:focus-visible,.brand:focus-visible,.nav-links a:focus-visible{outline:2px solid var(--focus-outline);outline-offset:3px}
+.btn:focus-visible{box-shadow:var(--btn-shadow),0 0 0 6px rgba(53,154,231,.28)}
+.seg label:has(input:focus-visible){outline:2px solid var(--focus-outline);outline-offset:2px;color:var(--text)}
+.field:focus-within{border-color:var(--kira);box-shadow:0 0 0 4px rgba(53,154,231,.28);background:rgba(0,0,0,.5)}
+.field:focus-within svg{color:var(--kira)}
+.btn:hover{filter:brightness(1.06)}
+
+/* invalid state */
+.field.is-invalid{border-color:var(--err-line);box-shadow:0 0 0 4px var(--err-ring)}
+.field.is-invalid svg{color:var(--err)}
+.wl .row{flex-wrap:wrap}
+.row .err{order:3;flex-basis:100%}
+.err{display:flex;align-items:center;gap:8px;margin:2px 8px 0;font-size:14px;font-weight:500;color:var(--err)}
+.err[hidden]{display:none}
+.err svg{flex:none}
+
+/* success state */
+.wl-done{display:flex;align-items:center;gap:18px;padding:22px 20px;min-height:132px;outline:none}
+.wl-done[hidden]{display:none}
+.wl-done .done-ic{flex:none;width:56px;height:56px;border-radius:18px;display:grid;place-items:center;background:rgba(53,154,231,.16);color:var(--kira-hi);box-shadow:0 0 0 1px rgba(53,154,231,.45) inset,0 0 36px -6px rgba(53,154,231,.7)}
+.wl-done .done-h{font-family:"Sora",sans-serif;font-size:24px;font-weight:600;letter-spacing:-.03em;line-height:1.2;color:var(--text)}
+.wl-done .done-p{margin-top:6px;font-size:16px;color:var(--muted)}
+.wl-done .done-p b{color:var(--text);font-weight:600}
+.wl.is-done{border-color:rgba(53,154,231,.4)}
+.join .wl-done{justify-content:center;text-align:left}
+
+@media (max-width:760px){
+  .nav{position:fixed;background:rgba(4,6,13,.78);-webkit-backdrop-filter:blur(14px) saturate(140%);backdrop-filter:blur(14px) saturate(140%);border-bottom:1px solid rgba(255,255,255,.06)}
+  .nav .nav-right{display:flex}
+  .wl,.sec,#join{scroll-margin-top:84px}
+  .nav .pill{display:none}
+  .nav .btn-sm{display:inline-flex;height:36px;padding:0 16px;font-size:14px}
+  .btn-sm .lg{display:none}
+  .btn-sm .sm{display:inline}
+  .stage{width:196px;margin:0 auto}
+  .hero .eyebrow{margin-top:8px}
+  .hero h1{margin:14px 0 12px}
+  .wl{margin-top:20px}
+  .wl-done{padding:18px 14px;min-height:0;gap:14px}
+  .wl-done .done-ic{width:48px;height:48px;border-radius:15px}
+  .wl-done .done-h{font-size:21px}
+  .wl-done .done-p{font-size:15px}
+  .row .err{order:0;margin:-2px 6px 2px}
+}
+
+/* ---------- r2: consent micro text + footer links ---------- */
+.micro{align-items:flex-start;gap:9px;padding:12px 10px 4px 8px;font-size:12.5px;line-height:1.55;color:#A3AFC2;text-wrap:pretty}
+.micro svg{margin-top:3px}
+.foot-meta{display:flex;flex-direction:column;align-items:flex-end;gap:8px;text-align:right}
+.foot-links{display:flex;align-items:center;gap:10px;margin:0;font-size:13.5px}
+.foot-links .sep{opacity:.5}
+.foot-links a{color:var(--text);text-decoration:underline;text-decoration-color:rgba(255,255,255,.3);text-underline-offset:3px}
+.foot-links a:hover{text-decoration-color:var(--kira)}
+.foot-links a:focus-visible{outline:2px solid var(--focus-outline);outline-offset:3px;border-radius:4px}
+@media (max-width:760px){
+  .micro{font-size:12px;padding:10px 6px 2px 6px}
+  .stage{width:178px}
+  .hero .eyebrow{margin-top:4px}
+  .hero h1{margin:12px 0 12px}
+  .wl{margin-top:18px}
+  .foot-meta{align-items:flex-start;text-align:left}
+  .foot-links{flex-wrap:wrap}
+}
+
+/* ---------- launch: footer contact (email + phone) + Instagram handle ---------- */
+.foot .follow .handle{color:var(--text);text-decoration:underline;text-decoration-color:rgba(255,255,255,.3);text-underline-offset:3px}
+.foot .follow .handle:hover{text-decoration-color:var(--kira)}
+.foot .follow .handle:focus-visible{outline:2px solid var(--focus-outline);outline-offset:3px;border-radius:4px}
+.foot-links .contact{display:inline-flex;flex-wrap:wrap;align-items:center;column-gap:10px;row-gap:4px}
+.foot-links .contact a{white-space:nowrap}
+@media (max-width:760px){
+  .foot-links{row-gap:6px}
+  .foot-links .sep-contact{display:none}
+  .foot-links .contact{flex-basis:100%}
+  .foot-links .contact .sep{display:none}
+  .foot-links .contact a[href^="tel:"]{flex-basis:100%}
+}
+
+/* ---------- launch: Kit states ---------- */
+.wl-done .done-p a{color:var(--text);text-decoration:underline;text-decoration-color:rgba(255,255,255,.35);text-underline-offset:3px}
+
+/* v3 polish: avoid a one-word orphan ("in") in the landlord flow items on narrow screens */
+.flow .it{text-wrap:balance}
+
+/* ---------- v3: two-sided homepage (choice cards, trust row, 4-icon how it works) + shared nav link ---------- */
+.nav-ll{display:none;font-size:14px;font-weight:600;color:var(--text);text-decoration:underline;text-decoration-color:rgba(255,255,255,.3);text-underline-offset:4px}
+.nav-ll:hover{text-decoration-color:var(--kira)}
+.nav-links a[aria-current="page"],.nav-ll[aria-current="page"]{color:var(--text)}
+.nav-ll:focus-visible{outline:2px solid var(--focus-outline);outline-offset:3px;border-radius:4px}
+@media (max-width:1100px){.nav-ll{display:inline-flex}}
+
+.hero3 h1{font-size:88px;margin:24px 0 18px;letter-spacing:-.045em}
+.hero3 .sub{font-size:21px;line-height:1.5;color:var(--text);max-width:540px}
+.hero3 .sub2{margin-top:8px;font-size:17px;line-height:1.5;color:var(--muted);max-width:540px}
+.choose{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:32px;max-width:560px}
+.ch{position:relative;display:flex;flex-direction:column;align-items:flex-start;min-height:152px;padding:20px 20px 18px;border-radius:24px;border:1px solid var(--line);transition:transform .15s ease,filter .15s ease}
+.ch:hover{transform:translateY(-2px)}
+.ch .ic{width:44px;height:44px;border-radius:14px;display:grid;place-items:center}
+.ch b{margin-top:auto;padding-top:18px;font-family:"Sora",sans-serif;font-size:19px;font-weight:600;letter-spacing:-.02em;line-height:1.2}
+.ch small{margin-top:4px;font-size:14px;line-height:1.4}
+.ch .go{position:absolute;top:22px;right:20px}
+.ch-rent{background:var(--btn-bg);color:var(--btn-text);border-color:transparent;box-shadow:var(--btn-shadow)}
+.ch-rent .ic{background:rgba(3,17,31,.14)}
+.ch-rent small{color:rgba(3,17,31,.78)}
+.ch-own{background:var(--card-hi);border-color:var(--line-hi);color:var(--text);box-shadow:var(--tag-shadow)}
+.ch-own .ic{background:var(--ic-bg);color:var(--kira-hi)}
+.ch-own small{color:var(--muted)}
+.ch-own .go{color:var(--kira)}
+.ch:focus-visible{outline:2px solid var(--focus-outline);outline-offset:3px}
+.trust{list-style:none;display:flex;flex-wrap:wrap;gap:10px 22px;margin:22px 0 0;padding:0;font-size:14.5px;font-weight:600;color:var(--text)}
+.trust li{display:flex;align-items:center;gap:7px}
+.trust svg{color:var(--kira)}
+
+.how3{padding:40px 0 120px;text-align:center}
+.how3 h2{font-size:40px}
+.icons5{list-style:none;margin:40px auto 0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:16px;max-width:980px;position:relative}
+.icons5::before{content:"";position:absolute;left:10%;right:10%;top:36px;height:1px;background:linear-gradient(90deg,transparent,var(--kira),transparent);opacity:.5}
+.icons5 li{position:relative;display:flex;flex-direction:column;align-items:center;gap:14px}
+.icons5 .ic{width:72px;height:72px;border-radius:22px;display:grid;place-items:center;background:var(--panel);border:1px solid var(--line-hi);color:var(--kira-hi);box-shadow:var(--ic-glow)}
+.icons5 b{font-family:"Sora",sans-serif;font-size:16px;font-weight:600;letter-spacing:-.01em;line-height:1.25}
+
+.ll-band{padding:0 0 40px}
+.ll-link{display:flex;align-items:center;gap:16px;max-width:620px;margin:0 auto;padding:18px 22px;border-radius:20px;background:var(--glass);border:1px solid var(--line);box-shadow:var(--tag-shadow);font-size:16px;color:var(--muted)}
+.ll-link b{color:var(--text);font-weight:600}
+.ll-link .ic{flex:none;width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:var(--ic-bg);color:var(--kira)}
+.ll-link .go{margin-left:auto;flex:none;color:var(--kira)}
+.ll-link:hover{border-color:var(--line-hi)}
+.ll-link:focus-visible{outline:2px solid var(--focus-outline);outline-offset:3px}
+
+@media (max-width:1100px){.hero3 h1{font-size:68px}}
+@media (max-width:760px){
+  .hero3 .hero-copy{text-align:center}
+  .hero3 .eyebrow{margin-top:0}
+  .hero3 h1{font-size:54px;margin:14px 0 12px}
+  .hero3 .sub{font-size:18px;margin:0 auto}
+  .hero3 .sub2{font-size:15.5px;margin:6px auto 0}
+  .choose{gap:10px;margin-top:24px}
+  .ch{min-height:138px;padding:16px 14px 14px;border-radius:20px;text-align:left}
+  .ch .ic{width:40px;height:40px;border-radius:12px}
+  .ch b{font-size:17px;padding-top:14px}
+  .ch small{font-size:13px}
+  .ch .go{top:18px;right:14px}
+  .trust{justify-content:center;gap:8px 16px;font-size:13.5px;margin-top:18px}
+  .how3{padding:24px 0 72px}
+  .how3 h2{font-size:28px}
+  .icons5{gap:8px;margin-top:24px}
+  .icons5::before{top:28px}
+  .icons5 .ic{width:56px;height:56px;border-radius:17px}
+  .icons5 .ic svg{width:22px;height:22px}
+  .icons5 b{font-size:13px}
+  .ll-band{padding:0 0 24px}
+  .ll-link{padding:14px 16px;font-size:14.5px;gap:12px}
+}
+
+/* v3: renter flow (homepage #renters) */
+.rent3 .wrap{align-items:start}
+.rent3 .visual{position:sticky;top:40px}
+.rsteps{list-style:none;margin:28px 0 0;padding:0;display:grid;gap:8px;max-width:560px}
+.rsteps li{display:flex;align-items:flex-start;gap:14px;padding:14px 16px;border-radius:16px;background:var(--card);border:1px solid var(--line)}
+.rsteps li:last-child{background:var(--card-hi);border-color:var(--line-hi)}
+.rsteps li.opt-step{border-style:dashed}
+.rsteps .n{flex:none;width:28px;height:28px;border-radius:9px;display:grid;place-items:center;background:var(--ic-bg);color:var(--kira-hi);font-family:"Sora",sans-serif;font-size:13px;font-weight:600}
+.rsteps b{display:block;font-size:16px;font-weight:600;line-height:1.35;color:var(--text);padding-top:3px}
+.rsteps span:not(.n):not(.opt):not(.chips-sm){display:block;margin-top:2px;font-size:14.5px;line-height:1.5;color:var(--muted)}
+.rsteps .opt{display:inline-block;margin-left:6px;padding:1px 8px;border-radius:999px;border:1px solid var(--line-hi);font-size:11.5px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--kira-text);vertical-align:2px}
+@media (max-width:760px){
+  .icons5{gap:4px}
+  .icons5 b{font-size:12px}
+  .icons5 .ic{width:52px;height:52px;border-radius:16px}
+  .rent3 .visual{display:none}
+  .rsteps{margin-top:20px;gap:6px}
+  .rsteps li{padding:12px 12px;gap:12px}
+  .rsteps b{font-size:15px}
+  .rsteps span:not(.n):not(.opt):not(.chips-sm){font-size:13.5px}
+}
+.rsteps .chips-sm{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 6px}
+.rsteps .chips-sm i{font-style:normal;padding:4px 10px;border-radius:999px;background:var(--glass);border:1px solid var(--line);font-size:12.5px;font-weight:500;color:var(--text);white-space:nowrap}
+/* wording cut: standalone Kira "ask" block */
+.ask3{padding:20px 0 90px}
+.ask3 .ask{width:100%;max-width:640px;margin:0 auto}
+@media (max-width:760px){.ask3{padding:8px 0 56px}.ask3 .ask img{width:96px}}
+
+/* ---------- landlords page (/landlords/) : mobile-first ---------- */
+.lp{position:relative;overflow:hidden;padding-top:84px}
+.lp-glow{position:absolute;left:50%;top:-300px;width:700px;height:560px;transform:translateX(-50%);background:var(--panel-glow-top);opacity:.8;pointer-events:none}
+.lp .wrap{position:relative;z-index:1;padding:0 20px;max-width:680px}
+.lp-hero .wrap{display:grid;grid-template-columns:1fr;gap:0}
+.lp-kira{display:none}
+.lp h1{font-size:44px;letter-spacing:-.04em;line-height:1.04;margin:14px 0 12px}
+.lp .sub{font-size:19px;line-height:1.55;color:var(--muted)}
+.lp-scale{margin-top:14px;padding-left:12px;border-left:2px solid var(--kira);font-size:17px;font-weight:600;line-height:1.45;color:var(--kira-text)}
+.lp-btns{display:grid;gap:10px;margin-top:22px}
+.lp-btns .btn{width:100%;height:56px;font-size:17px}
+.btn-ghost{background:transparent;color:var(--text);box-shadow:none;border:1px solid var(--line-hi)}
+.btn-ghost:hover{background:rgba(53,154,231,.1);filter:none}
+.lp-pill{margin-top:18px}
+.lp-sec{padding:44px 0 0}
+.lp-sec h2{font-size:26px;letter-spacing:-.03em;line-height:1.15}
+.lp-pains,.lp-likes{list-style:none;margin:18px 0 0;padding:0;display:grid;gap:8px}
+.lp-pains li,.lp-likes li{display:flex;align-items:center;gap:14px;padding:14px 16px;border-radius:16px;background:var(--card);border:1px solid var(--line);font-size:15.5px;line-height:1.45;color:var(--text)}
+.lp-pains .ic,.lp-likes .ic{flex:none;width:34px;height:34px;border-radius:11px;display:grid;place-items:center}
+.lp-pains .ic{background:rgba(255,122,122,.1);color:#FF9A9A}
+.lp-likes li{background:var(--card-hi);border-color:var(--line-hi)}
+.lp-likes .ic{background:var(--ic-bg);color:var(--kira-hi)}
+.lp-steps{list-style:none;margin:18px 0 0;padding:0;display:grid;gap:8px;position:relative}
+.lp-steps li{display:flex;align-items:flex-start;gap:14px;padding:16px;border-radius:18px;background:var(--glass);border:1px solid var(--line);box-shadow:var(--tag-shadow)}
+.lp-steps .n{flex:none;width:32px;height:32px;border-radius:50%;display:grid;place-items:center;background:var(--btn-bg);color:var(--btn-text);font-family:"Sora",sans-serif;font-size:14px;font-weight:700}
+.lp-steps b{display:block;font-family:"Sora",sans-serif;font-size:17px;font-weight:600;letter-spacing:-.02em;line-height:1.3;padding-top:4px}
+.lp-steps p{margin-top:4px;font-size:14.5px;line-height:1.55;color:var(--muted)}
+.lp-cap{margin-top:14px;padding:14px 16px;border-left:2px solid var(--kira);font-size:15px;line-height:1.55;color:var(--text)}
+.lp-note{display:flex;align-items:flex-start;gap:8px;margin-top:16px;font-size:13.5px;line-height:1.5;color:var(--muted)}
+.lp-note svg{flex:none;margin-top:3px;color:var(--kira)}
+.lp-join{padding:48px 0 72px}
+.lp-join .wrap{max-width:760px}
+.lp-join h2{font-size:32px}
+.ll-role{display:flex;align-items:center;gap:8px;margin:2px 6px 10px;font-size:14px;font-weight:600;color:var(--text)}
+.ll-role svg{color:var(--kira)}
+.ll-units{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 8px;padding:6px 6px 6px 12px;border-radius:16px;background:var(--seg-bg)}
+.ll-units label{font-size:14px;font-weight:600;color:var(--text)}
+.ll-units .opt{margin-left:4px;font-weight:500;font-size:12.5px;color:var(--muted)}
+.sel{position:relative}
+.sel select{appearance:none;-webkit-appearance:none;height:42px;padding:0 36px 0 14px;border-radius:12px;border:1px solid var(--input-line);background:var(--input-bg);color:var(--text);font:inherit;font-size:15px;cursor:pointer}
+.sel select:focus-visible{outline:2px solid var(--focus-outline);outline-offset:2px}
+.sel svg{position:absolute;right:12px;top:13px;transform:rotate(90deg);color:var(--muted);pointer-events:none}
+.lp-try{position:relative;margin-top:20px;font-size:14.5px;color:var(--muted)}
+.lp-try a{color:var(--text);font-weight:600;text-decoration:underline;text-decoration-color:var(--kira);text-underline-offset:3px}
+@media (max-width:760px){
+  .lp-join .box{padding:40px 12px 16px}
+  .lp-join h2{font-size:28px;margin-top:18px}
+  .lp-join .wl{margin-top:22px}
+}
+@media (min-width:761px){
+  .lp{padding-top:120px}
+  .lp .wrap{padding:0 56px;max-width:1040px}
+  .lp-hero .wrap{grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:48px;align-items:center}
+  .lp h1{font-size:64px;margin:20px 0 18px}
+  .lp .sub{font-size:19px;max-width:560px}
+  .lp-btns{display:flex;gap:12px;margin-top:30px}
+  .lp-btns .btn{width:auto;height:56px}
+  .lp-kira{display:flex;position:relative;align-items:center;justify-content:center;aspect-ratio:1/1;width:100%;max-width:380px;justify-self:end}
+  .lp-kira .halo{position:absolute;inset:-6%;border-radius:50%;background:var(--halo)}
+  .lp-kira .ring{position:absolute;border-radius:50%;border:1px solid var(--ring)}
+  .lp-kira .r1{inset:4%}.lp-kira .r2{inset:-12%;opacity:.5}
+  .lp-kira img{position:relative;width:84%;filter:var(--kira-filter)}
+  .lp-kira .tag{position:absolute;left:-8%;bottom:6%;display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:14px;background:var(--glass);border:1px solid var(--line);backdrop-filter:blur(14px);font-size:13px;box-shadow:var(--tag-shadow);white-space:nowrap}
+  .lp-kira .tag small{display:block;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600}
+  .lp-kira .tag .ic{width:30px;height:30px;border-radius:9px;display:grid;place-items:center;background:var(--ic-bg);color:var(--kira)}
+  .lp-sec{padding-top:80px}
+  .lp-sec h2{font-size:38px}
+  .lp-pains{grid-template-columns:1fr 1fr;gap:12px}
+  .lp-pains li:last-child{grid-column:1/-1}
+  .lp-steps{grid-template-columns:1fr 1fr;gap:12px}
+  .lp-steps li{padding:22px}
+  .lp-likes{grid-template-columns:repeat(3,1fr);gap:12px}
+  .lp-likes li{flex-direction:column;align-items:flex-start;padding:20px}
+  .lp-join{padding:90px 0 120px}
+  .lp-join h2{font-size:48px}
+  .ll-units{max-width:none}
+}
+/* wording cut: bigger type, icon tiles, chips */
+.lp-sec h2{font-size:28px}
+.lp-pains{grid-template-columns:1fr 1fr;gap:10px}
+.lp-pains li{flex-direction:column;align-items:flex-start;gap:12px;padding:16px;font-size:16.5px;font-weight:600;line-height:1.3}
+.lp-pains li:last-child{grid-column:1/-1;flex-direction:row;align-items:center}
+.lp-pains .ic{width:42px;height:42px;border-radius:13px}
+.lp-steps b{font-size:19px}
+.lp-steps p{font-size:16px}
+.lp-chips{list-style:none;margin:12px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.lp-chips li{display:inline-flex;align-items:center;gap:7px;padding:8px 12px;border-radius:999px;background:var(--card-hi);border:1px solid var(--line-hi);font-size:14.5px;font-weight:600;color:var(--text);white-space:nowrap}
+.lp-chips svg{color:var(--kira-hi);flex:none}
+.lp-steps .lp-hours{display:flex;align-items:center;gap:8px;margin-top:14px;font-size:15.5px;color:var(--text)}
+.lp-hours svg{color:var(--kira);flex:none}
+.lp-steps .lp-small{margin-top:6px;font-size:13.5px;color:var(--muted)}
+.lp-choose{position:relative;display:inline-flex;align-items:center;gap:8px;margin-top:14px;font-size:18px;font-weight:600;color:var(--kira-text)}
+.lp-try{font-size:15px}
+.lp-try a{color:var(--muted);font-weight:500}
+@media (min-width:761px){
+  .lp-sec h2{font-size:40px}
+  .lp-pains{grid-template-columns:repeat(5,1fr);gap:12px}
+  .lp-pains li,.lp-pains li:last-child{grid-column:auto;flex-direction:column;align-items:flex-start;font-size:17px}
+  .lp-steps{grid-template-columns:1fr;max-width:820px}
+}
+.lp-steps li>div>b:only-child{padding-top:5px}
+/* safety block */
+.lp-safe{margin-top:16px;padding:24px 20px;border-radius:24px;background:linear-gradient(160deg,rgba(53,154,231,.18),rgba(53,154,231,.04));border:1px solid var(--line-hi);box-shadow:var(--tag-shadow)}
+.lp-safe-h{display:flex;align-items:center;gap:14px}
+.lp-safe-h .ic{flex:none;width:56px;height:56px;border-radius:18px;display:grid;place-items:center;background:var(--btn-bg);color:var(--btn-text)}
+.lp-safe h3{font-family:"Sora",sans-serif;font-size:28px;font-weight:700;letter-spacing:-.03em;line-height:1.1}
+.lp-safe ul{list-style:none;margin:20px 0 0;padding:0;display:grid;gap:14px}
+.lp-safe li{display:flex;align-items:flex-start;gap:12px;font-size:18px;font-weight:600;line-height:1.35;color:var(--text)}
+.lp-safe li svg{flex:none;margin-top:1px;color:var(--kira-hi)}
+@media (min-width:761px){
+  .lp-safe{max-width:820px;margin-top:20px;padding:36px 36px}
+  .lp-safe h3{font-size:40px}
+  .lp-safe-h .ic{width:64px;height:64px}
+  .lp-safe li{font-size:20px}
+}
+
+/* ---------- creators page (/creators/): thin layer on top of the live landlords.css (.lp hero, .lp-kira, .lp-chips, .lp-join panel) ---------- */
+.cr h1 .k{background:var(--k-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.cr h1{font-size:42px;line-height:1.04}
+.cr-tag{gap:7px}
+.cr-tag svg{color:var(--kira-hi)}
+.btn svg.down,.cr-step .go.down{transform:rotate(90deg)}
+/* Kira: shown on phones too (landlords hides it), smaller and centred */
+.cr .cr-kira{display:flex;position:relative;align-items:center;justify-content:center;width:176px;aspect-ratio:1/1;margin:30px auto 0}
+.cr-kira .halo{position:absolute;inset:-8%;border-radius:50%;background:var(--halo)}
+.cr-kira .ring{position:absolute;border-radius:50%;border:1px solid var(--ring)}
+.cr-kira .r1{inset:2%}.cr-kira .r2{inset:-14%;opacity:.5}
+.cr-kira img{position:relative;width:84%;height:auto;filter:var(--kira-filter)}
+/* what we're asking */
+.cr-ask{margin-top:16px;gap:10px}
+.cr-ask li{padding:11px 16px;font-size:16px}
+/* grow card */
+.cr-grow{display:flex;align-items:flex-start;gap:14px;margin-top:18px;padding:20px;border-radius:22px;background:linear-gradient(160deg,rgba(53,154,231,.18),rgba(53,154,231,.04));border:1px solid var(--line-hi);box-shadow:var(--tag-shadow)}
+.cr-grow .ic{flex:none;width:48px;height:48px;border-radius:15px;display:grid;place-items:center;background:var(--btn-bg);color:var(--btn-text)}
+.cr-grow h3{font-family:"Sora",sans-serif;font-size:22px;font-weight:700;letter-spacing:-.03em;line-height:1.15;padding-top:2px}
+.cr-grow p{margin-top:8px;font-size:16px;line-height:1.55;color:var(--muted);text-wrap:pretty}
+/* founding creator perks */
+.cr-perks{margin-top:10px;padding:18px 20px;border-radius:20px;background:var(--card-hi);border:1px solid var(--line-hi)}
+.cr-perks h3{font-family:"Sora",sans-serif;font-size:18px;font-weight:600;letter-spacing:-.02em}
+.cr-perks ul{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:10px}
+.cr-perks li{display:flex;align-items:center;gap:12px;font-size:16.5px;font-weight:600;line-height:1.35;color:var(--text)}
+.cr-perks li svg{flex:none;color:var(--kira-hi)}
+/* steps */
+.cr-steps{list-style:none;margin:18px 0 0;padding:0;display:grid;gap:8px}
+.cr-steps li{margin:0}
+.cr-step{display:flex;align-items:center;gap:14px;padding:14px 16px;border-radius:18px;background:var(--glass);border:1px solid var(--line);box-shadow:var(--tag-shadow);color:var(--text);text-decoration:none;transition:border-color .15s,background .15s}
+.cr-step:hover{border-color:var(--line-hi);background:rgba(53,154,231,.08)}
+.cr-step:focus-visible{outline:2px solid var(--focus-outline);outline-offset:3px}
+.cr-step .n{flex:none;width:32px;height:32px;border-radius:50%;display:grid;place-items:center;background:var(--btn-bg);color:var(--btn-text);font-family:"Sora",sans-serif;font-size:14px;font-weight:700}
+.cr-step .t{flex:1;min-width:0;font-family:"Sora",sans-serif;font-weight:600;font-size:19px;letter-spacing:-.02em;line-height:1.3}
+.cr-step .go{flex:none;color:var(--kira)}
+/* form inside the landlord-style join panel */
+.cr-join h2{text-wrap:balance}
+.cr-wl{margin-top:22px;padding:16px 12px 10px;border-radius:22px;text-align:left;scroll-margin-top:84px}
+.cr-form .q{margin:0 0 18px;padding:0;border:0;min-width:0}
+.cr-form .ql{display:block;padding:0;margin:0 4px 8px;font-size:15.5px;font-weight:600;color:var(--text)}
+.cr-form .opt{margin-left:6px;font-weight:500;font-size:12.5px;color:var(--muted)}
+.cr-form .field{height:52px}
+.cr-form .field .at{flex:none;font-size:15px;font-weight:600;color:var(--muted)}
+.cr-form .err{margin:8px 6px 0}
+.cr-seg{grid-template-columns:repeat(2,1fr)!important}
+.cr-seg.c3{grid-template-columns:1fr 1fr 1fr!important}
+.cr-seg label{height:48px!important;font-size:15px!important;white-space:normal;text-align:center;line-height:1.2;padding:0 6px}
+.cr-seg.c3 label{font-size:14px!important}
+.cr-seg label:has(input:focus-visible){outline:2px solid var(--focus-outline);outline-offset:2px;color:var(--text)}
+.q.is-invalid .seg{box-shadow:0 0 0 1px var(--err-line),0 0 0 4px var(--err-ring)}
+/* tap chips: same look as the landlord .lp-chips, selectable */
+.cr-chips{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.cr-chips label{position:relative;display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 16px;border-radius:999px;background:var(--card-hi);border:1px solid var(--line-hi);font-size:15px;font-weight:600;color:var(--text);cursor:pointer;white-space:nowrap;transition:background .15s,border-color .15s}
+.cr-chips input{position:absolute;opacity:0;width:1px;height:1px;margin:0}
+.cr-chips label:hover{border-color:var(--kira)}
+.cr-chips label:has(input:checked){background:var(--btn-bg);border-color:transparent;color:var(--btn-text);box-shadow:0 0 22px -6px rgba(53,154,231,.8)}
+.cr-chips label:has(input:focus-visible){outline:2px solid var(--focus-outline);outline-offset:2px}
+.q.is-invalid .cr-chips label{border-color:var(--err-line)}
+.cr-links{display:grid;gap:8px}
+.cr-checks{display:grid;gap:12px;margin-top:4px!important}
+.check{position:relative;display:flex;align-items:flex-start;gap:12px;padding:4px;font-size:15px;line-height:1.5;color:var(--text);cursor:pointer}
+.check input{position:absolute;opacity:0;width:1px;height:1px}
+.check .cb{flex:none;width:22px;height:22px;margin-top:1px;border-radius:7px;border:1.5px solid var(--input-line);background:var(--input-bg);display:grid;place-items:center}
+.check input:checked + .cb{background:var(--kira);border-color:var(--kira)}
+.check input:checked + .cb::after{content:"";width:6px;height:11px;margin-top:-2px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg)}
+.check input:focus-visible + .cb{outline:2px solid var(--focus-outline);outline-offset:2px}
+.is-invalid .check .cb{border-color:var(--err-line);box-shadow:0 0 0 4px var(--err-ring)}
+.cr-submit{width:100%;height:56px;margin-top:6px;font-size:17px}
+.cr-form .send-err{margin-top:10px}
+.cr-form .micro a{color:var(--text);text-decoration:underline;text-decoration-color:rgba(255,255,255,.3);text-underline-offset:3px}
+.cr-wl .wl-done{min-height:0;padding:20px 12px}
+.cr-alt{position:relative;margin-top:20px;font-size:16px;color:var(--muted)}
+.cr-alt a{color:var(--text);font-weight:600;text-decoration:underline;text-decoration-color:var(--kira);text-underline-offset:3px}
+.cr-alt a:focus-visible{outline:2px solid var(--focus-outline);outline-offset:3px;border-radius:4px}
+@media (min-width:761px){
+  .cr h1{font-size:64px}
+  .cr .cr-kira{width:100%;max-width:380px;margin:0;justify-self:end}
+  .cr-kira .halo{inset:-6%}.cr-kira .r1{inset:4%}.cr-kira .r2{inset:-12%}
+  .cr .lp-sec .wrap > *{max-width:820px}
+  .cr-ask li{font-size:17px;padding:12px 18px}
+  .cr-grow{padding:28px 30px}
+  .cr-grow .ic{width:56px;height:56px}
+  .cr-grow h3{font-size:30px}
+  .cr-grow p{font-size:17px}
+  .cr-perks{padding:22px 30px}
+  .cr-perks ul{grid-template-columns:repeat(3,1fr);gap:16px}
+  .cr-steps{grid-template-columns:1fr 1fr;gap:12px}
+  .cr-step{padding:18px 22px}
+  .cr-wl{padding:26px 26px 14px;border-radius:28px;max-width:600px;margin-left:auto;margin-right:auto}
+}
+
+</style>
+</head>
+<body class="cr-page">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-home" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V20h14V9.5"/><path d="M10 20v-5.5h4V20"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4.5 6v5.5c0 4.6 3.2 8.4 7.5 9.5 4.3-1.1 7.5-4.9 7.5-9.5V6L12 3Z"/><path d="m8.8 12.2 2.3 2.3 4.3-4.6"/></symbol>
+    <symbol id="i-cal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15.5" rx="3"/><path d="M3.5 10h17M8 3v4M16 3v4"/><path d="M8 14h2.5M13.5 14H16M8 17.2h2.5"/></symbol>
+    <symbol id="i-orb" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="12" cy="12" r="8.5"/><path d="M5.5 10.2c1.6-1.6 3.9-2.4 6.5-2.4s4.9.8 6.5 2.4c-.2 2.6-3.1 4.2-6.5 4.2s-6.3-1.6-6.5-4.2Z"/><path d="M10.6 12.2c.8.6 2 .6 2.8 0"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5.5" width="18" height="13" rx="3"/><path d="m4 7.5 8 5.5 8-5.5"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5c.5 4.6 2.4 7 7.5 9.5-5.1 2.5-7 4.9-7.5 9.5-.5-4.6-2.4-7-7.5-9.5 5.1-2.5 7-4.9 7.5-9.5Z"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="12" cy="8.5" r="3.8"/><path d="M4.8 20c.9-3.6 3.8-5.6 7.2-5.6s6.3 2 7.2 5.6"/></symbol>
+    <symbol id="i-bldg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20.5V5.5L12 3v17.5M12 9h8v11.5M2.5 20.5h19"/><path d="M7.5 8.5v.01M7.5 12v.01M7.5 15.5v.01M15.5 12.5v.01M15.5 16v.01"/></symbol>
+    <symbol id="i-upload" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15V4M7.5 8.5 12 4l4.5 4.5"/><path d="M4 15v3a2.5 2.5 0 0 0 2.5 2.5h11A2.5 2.5 0 0 0 20 18v-3"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8.2 12.3 2.6 2.6 5-5.4"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-dollar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M14.8 9.2c-.5-.9-1.5-1.4-2.8-1.4-1.6 0-2.8.8-2.8 2.1 0 3 5.8 1.5 5.8 4.4 0 1.3-1.3 2.1-3 2.1-1.4 0-2.5-.6-3-1.6M12 6.2v1.6M12 16.4V18"/></symbol>
+    <symbol id="i-bolt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M13 3 5 13.5h6L10 21l9-11h-6l0-7Z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-6.5-5.8-6.5-11a6.5 6.5 0 0 1 13 0c0 5.2-6.5 11-6.5 11Z"/><circle cx="12" cy="10" r="2.3"/></symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5.5M12 16.4v.1"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.5V12l3 2"/></symbol>
+    <symbol id="i-id" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="19" height="14" rx="3"/><circle cx="8.5" cy="11" r="2.2"/><path d="M5.3 16c.6-1.6 1.8-2.4 3.2-2.4s2.6.8 3.2 2.4M14.5 10h4M14.5 13.5h3"/></symbol>
+    <symbol id="i-door" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 21V4.5A1.5 1.5 0 0 1 7.5 3h9A1.5 1.5 0 0 1 18 4.5V21M3.5 21h17"/><path d="M14.5 12.5v.01"/></symbol>
+    <symbol id="i-key" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="15" r="4.5"/><path d="m11.2 11.8 8.3-8.3M16.5 6.5l2.5 2.5M14 9l2 2"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 11.5c0 4.1-3.8 7.5-8.5 7.5-1.2 0-2.3-.2-3.3-.6L4 20l1.2-3.6C4.1 15 3.5 13.3 3.5 11.5 3.5 7.4 7.3 4 12 4s8.5 3.4 8.5 7.5Z"/><path d="M8.5 11.5h.01M12 11.5h.01M15.5 11.5h.01"/></symbol>
+  </defs>
+</svg>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="i-ig" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".6" fill="currentColor" stroke="none"/></symbol></svg>
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="../" aria-label="HouseTour AI home"><img src="../assets/housetour-mark-small.svg" alt="" width="36" height="36"><span>HouseTour <b>AI</b></span></a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="../#how">How it works</a>
+      <a href="../#renters">Renters</a>
+      <a href="../landlords/">For landlords</a>
+    </nav>
+    <div class="nav-right">
+      <a class="nav-ll" href="../landlords/">For landlords</a>
+      <span class="pill"><span class="dot"></span>In development</span>
+      <a class="btn-sm js-join" href="../#join"><span class="lg">Join the waitlist</span><span class="sm">Join</span></a>
+    </div>
+  </div>
+</header>
+
+<main id="top" class="lp cr">
+  <div class="lp-glow" aria-hidden="true"></div>
+  <section class="lp-hero">
+    <div class="wrap">
+      <div class="lp-copy">
+        <span class="pill cr-tag"><svg width="14" height="14" aria-hidden="true"><use href="#i-spark"/></svg>Creators <span class="sep">·</span> Toronto &amp; GTA</span>
+        <h1>Collaborate with <span class="k">HouseTour AI</span></h1>
+        <p class="sub">Short, natural Reels about the rental hunt.</p>
+        <div class="lp-btns">
+          <a class="btn" href="#apply">Apply to collaborate<svg class="down" width="18" height="18" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+        <span class="pill lp-pill"><span class="dot"></span>In development</span>
+      </div>
+      <div class="lp-kira cr-kira" aria-hidden="true">
+        <div class="ring r2"></div><div class="halo"></div><div class="ring r1"></div>
+        <img src="../assets/kira.png" alt="" width="600" height="600">
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-sec">
+    <div class="wrap">
+      <h2>What we're asking</h2>
+      <ul class="lp-chips cr-ask">
+        <li><svg width="18" height="18" aria-hidden="true"><use href="#i-clock"/></svg>One 30–40s Reel</li>
+        <li><svg width="18" height="18" aria-hidden="true"><use href="#i-ig"/></svg>Collab with @housetourai</li>
+        <li><svg width="18" height="18" aria-hidden="true"><use href="#i-dollar"/></svg>Paid partnership</li>
+      </ul>
+      <div class="cr-grow">
+        <span class="ic" aria-hidden="true"><svg width="24" height="24"><use href="#i-spark"/></svg></span>
+        <div><h3>Help us early, grow with us.</h3><p>Early creators get priority consideration for future long-term roles.</p></div>
+      </div>
+      <div class="cr-perks">
+        <h3>Founding creator perks</h3>
+        <ul>
+          <li><svg width="20" height="20" aria-hidden="true"><use href="#i-ig"/></svg><span>Featured on @housetourai</span></li>
+          <li><svg width="20" height="20" aria-hidden="true"><use href="#i-dollar"/></svg><span>First dibs on bigger paid campaigns</span></li>
+          <li><svg width="20" height="20" aria-hidden="true"><use href="#i-bolt"/></svg><span>Bonus when your video takes off</span></li>
+        </ul>
+      </div>
+      <ol class="cr-steps">
+        <li><a class="cr-step" href="https://instagram.com/housetourai" target="_blank" rel="noopener" aria-label="Step 1: Follow @housetourai on Instagram (opens in a new tab)"><span class="n" aria-hidden="true">1</span><span class="t">Follow @housetourai</span><svg class="go" width="20" height="20" aria-hidden="true"><use href="#i-ig"/></svg></a></li>
+        <li><a class="cr-step" href="#apply" aria-label="Step 2: Apply below"><span class="n" aria-hidden="true">2</span><span class="t">Apply below</span><svg class="go down" width="18" height="18" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="join lp-join cr-join" id="apply">
+    <div class="wrap">
+      <div class="box">
+        <h2>Apply to collaborate.</h2>
+        <div class="wl cr-wl" data-cr>
+      <form class="cr-form" action="#" method="post" novalidate aria-label="Apply to collaborate with HouseTour AI">
+        <input type="hidden" name="signup_source" value="creators-page">
+
+        <div class="q" data-q="name">
+          <label class="ql" for="cr-name">Name</label>
+          <label class="field"><svg width="18" height="18" aria-hidden="true"><use href="#i-user"/></svg><input id="cr-name" type="text" name="name" autocomplete="name" placeholder="Your name" required aria-describedby="err-name"></label>
+          <p class="err" id="err-name" role="alert" hidden><svg width="16" height="16" aria-hidden="true"><use href="#i-alert"/></svg>Please enter your name.</p>
+        </div>
+
+        <div class="q" data-q="email">
+          <label class="ql" for="cr-email">Email</label>
+          <label class="field"><svg width="18" height="18" aria-hidden="true"><use href="#i-mail"/></svg><input id="cr-email" type="email" name="email" autocomplete="email" inputmode="email" placeholder="you@email.com" required aria-describedby="err-email"></label>
+          <p class="err" id="err-email" role="alert" hidden><svg width="16" height="16" aria-hidden="true"><use href="#i-alert"/></svg>Please enter a valid email.</p>
+        </div>
+
+        <div class="q" data-q="instagram">
+          <label class="ql" for="cr-ig">Instagram handle</label>
+          <label class="field"><span class="at" aria-hidden="true">@</span><input id="cr-ig" type="text" name="instagram" autocomplete="off" autocapitalize="none" spellcheck="false" placeholder="yourhandle" required aria-describedby="err-instagram"></label>
+          <p class="err" id="err-instagram" role="alert" hidden><svg width="16" height="16" aria-hidden="true"><use href="#i-alert"/></svg>Please enter your Instagram handle.</p>
+        </div>
+
+        <div class="q" data-q="tiktok">
+          <label class="ql" for="cr-tt">TikTok handle <span class="opt">optional</span></label>
+          <label class="field"><span class="at" aria-hidden="true">@</span><input id="cr-tt" type="text" name="tiktok" autocomplete="off" autocapitalize="none" spellcheck="false" placeholder="yourhandle"></label>
+        </div>
+
+        <fieldset class="q" data-q="follower_range" aria-describedby="err-follower_range">
+          <legend class="ql">Follower range</legend>
+          <div class="seg cr-seg c4">
+            <label><input type="radio" name="follower_range" value="under-5k">Under 5K</label>
+            <label><input type="radio" name="follower_range" value="5k-20k">5K–20K</label>
+            <label><input type="radio" name="follower_range" value="20k-50k">20K–50K</label>
+            <label><input type="radio" name="follower_range" value="50k-plus">50K+</label>
+          </div>
+          <p class="err" id="err-follower_range" role="alert" hidden><svg width="16" height="16" aria-hidden="true"><use href="#i-alert"/></svg>Please choose your follower range.</p>
+        </fieldset>
+
+        <fieldset class="q" data-q="toronto_based" aria-describedby="err-toronto_based">
+          <legend class="ql">Toronto-based?</legend>
+          <div class="seg cr-seg c2">
+            <label><input type="radio" name="toronto_based" value="yes">Yes</label>
+            <label><input type="radio" name="toronto_based" value="no">No</label>
+          </div>
+          <p class="err" id="err-toronto_based" role="alert" hidden><svg width="16" height="16" aria-hidden="true"><use href="#i-alert"/></svg>Please choose Yes or No.</p>
+        </fieldset>
+
+        <fieldset class="q" data-q="story_side" aria-describedby="err-story_side">
+          <legend class="ql">Which side fits you</legend>
+          <div class="seg cr-seg c3">
+            <label><input type="radio" name="story_side" value="renter">Renter stories</label>
+            <label><input type="radio" name="story_side" value="landlord">Landlord stories</label>
+            <label><input type="radio" name="story_side" value="either">Either</label>
+          </div>
+          <p class="err" id="err-story_side" role="alert" hidden><svg width="16" height="16" aria-hidden="true"><use href="#i-alert"/></svg>Please choose which side fits you.</p>
+        </fieldset>
+
+        <fieldset class="q" data-q="reel_links" aria-describedby="err-reel_links">
+          <legend class="ql">2–3 past Reels <span class="opt">1 required</span></legend>
+          <div class="cr-links">
+            <label class="field"><span class="sr">Reel link 1</span><input type="url" name="reel_1" inputmode="url" autocapitalize="none" spellcheck="false" placeholder="https://www.instagram.com/reel/..."></label>
+            <label class="field"><span class="sr">Reel link 2</span><input type="url" name="reel_2" inputmode="url" autocapitalize="none" spellcheck="false" placeholder="https://www.instagram.com/reel/..."></label>
+            <label class="field"><span class="sr">Reel link 3</span><input type="url" name="reel_3" inputmode="url" autocapitalize="none" spellcheck="false" placeholder="https://www.instagram.com/reel/..."></label>
+          </div>
+          <p class="err" id="err-reel_links" role="alert" hidden><svg width="16" height="16" aria-hidden="true"><use href="#i-alert"/></svg><span>Please add at least one Reel link (starting with https://).</span></p>
+        </fieldset>
+
+        <fieldset class="q" data-q="rate_cad" aria-describedby="err-rate_cad">
+          <legend class="ql">What's your rate per Reel?</legend>
+          <div class="cr-chips">
+            <label><input type="radio" name="rate_cad" value="under-150-cad" required>Under $150 CAD</label>
+            <label><input type="radio" name="rate_cad" value="150-300-cad">$150–300 CAD</label>
+            <label><input type="radio" name="rate_cad" value="300-500-cad">$300–500 CAD</label>
+            <label><input type="radio" name="rate_cad" value="500-plus-cad">$500+ CAD</label>
+          </div>
+          <p class="err" id="err-rate_cad" role="alert" hidden><svg width="16" height="16" aria-hidden="true"><use href="#i-alert"/></svg>Please choose your rate.</p>
+        </fieldset>
+
+        <div class="q cr-checks">
+          <label class="check q-follow"><input type="checkbox" name="follows_ig" value="yes"><span class="cb" aria-hidden="true"></span><span>I follow @housetourai <span class="opt">optional</span></span></label>
+          <div data-q="consent">
+            <label class="check"><input id="cr-consent" type="checkbox" name="consent" value="yes" required aria-describedby="err-consent"><span class="cb" aria-hidden="true"></span><span>I agree to get emails about creator work from HouseTour AI (Charter Residential). Unsubscribe anytime.</span></label>
+            <p class="err" id="err-consent" role="alert" hidden><svg width="16" height="16" aria-hidden="true"><use href="#i-alert"/></svg>Please tick the box so we can email you about your application.</p>
+          </div>
+        </div>
+
+        <button class="btn cr-submit" type="submit">Apply to collaborate<svg width="18" height="18" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+        <p class="err send-err" role="alert" hidden><svg width="16" height="16" aria-hidden="true"><use href="#i-alert"/></svg>Something went wrong. Please try again.</p>
+        <p class="micro"><svg width="14" height="14" aria-hidden="true"><use href="#i-spark"/></svg><span>We use your answers to review your application. <a href="../privacy/">Privacy</a></span></p>
+      </form>
+      <div class="wl-done" role="status" tabindex="-1" hidden>
+        <span class="done-ic"><svg width="24" height="24" aria-hidden="true"><use href="#i-check"/></svg></span>
+        <div><p class="done-h">Thanks!</p><p class="done-p">We review every application and will email you from <b>ammo@aihousetour.com</b> if it's a match.</p></div>
+      </div>
+    </div>
+
+        <p class="cr-alt">Renting? <a href="../#join">Join the renter waitlist</a></p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <a class="brand" href="../" aria-label="HouseTour AI home"><img src="../assets/housetour-mark-small.svg" alt="" width="32" height="32"><span>HouseTour <b>AI</b></span></a>
+    <div class="foot-meta">
+      <p class="follow"><span>Follow the build <a class="handle" href="https://www.instagram.com/housetourai/" target="_blank" rel="noopener" aria-label="@housetourai on Instagram (opens in a new tab)"><b>@housetourai</b></a></span><span class="sep">·</span><span>a Charter Residential company</span></p>
+      <p class="foot-links">
+        <a href="../privacy/">Privacy</a>
+        <span class="sep sep-contact" aria-hidden="true">·</span>
+        <span class="contact">Contact: <a href="mailto:ammo@aihousetour.com" aria-label="Email ammo@aihousetour.com">ammo@aihousetour.com</a><span class="sep" aria-hidden="true">·</span><a href="tel:+14379742863" aria-label="Call or text +1 437 974 2863">+1 437 974 2863</a></span>
+      </p>
+    </div>
+  </div>
+</footer>
+<script>
+/* HouseTour AI creators application form -> Kit (formerly ConvertKit).
+ * Source of truth: src-v2/creators.js (inlined into dark-v2/creators/index.html and launch/creators/index.html by build.py).
+ * Same pattern as the live homepage/landlords forms (src-v2/waitlist.js, src-v2/landlords.js): our own HTML form,
+ * public Kit form endpoint, urlencoded POST via fetch, no API key, no Kit embed/template/JS.
+ *
+ * ============================== KIT CONFIG ==============================
+ * CREATOR_KIT_FORM_ID  Kit form 'Creator applications' (data-uid b44b82541e):
+ *                      POST https://app.kit.com/forms/10084828/subscriptions
+ *                      No tag is sent from the page (none configured for this form).
+ *
+ * CREATOR_FIELDS       Kit custom field keys (Kit > Subscribers > Custom fields). Each key must match EXACTLY.
+ *                      Set a value to '' to stop sending that answer.
+ *
+ * Sent: email_address, fields[first_name] (Kit standard field = the Name entered), and the answers below as fields[...].
+ * ?src= in the page URL (e.g. /creators/?src=story-1) is sanitised to a-z, 0-9, hyphens (max 40 chars)
+ * and sent as fields[signup_source]; with no ?src it is 'creators-page'.
+ *
+ * NO KEYS OF ANY KIND belong here: never paste a Kit API secret or v4 key (kit_...) into this page.
+ * =========================================================================
+ */
+(function () {
+  'use strict';
+
+  var CREATOR_KIT_FORM_ID = '10084828'; // Kit form 'Creator applications' (data-uid b44b82541e)
+  var CREATOR_FIELDS = {
+    instagram: 'instagram',           // Instagram handle, without the @
+    tiktok: 'tiktok',                 // TikTok handle, without the @ ('' if left blank)
+    follower_range: 'follower_range', // under-5k | 5k-20k | 20k-50k | 50k-plus
+    toronto_based: 'toronto_based',   // yes | no
+    story_side: 'story_side',         // renter | landlord | either
+    reel_links: 'reel_links',         // the 1-3 Reel links joined into one value with ' | '
+    rate_cad: 'rate_cad',             // required rate-per-Reel range: under-150-cad | 150-300-cad | 300-500-cad | 500-plus-cad
+    follows_ig: 'follows_ig',         // yes | no (optional checkbox, not a gate)
+    signup_source: 'signup_source'    // ?src value, or 'creators-page'
+  };
+  /* ================================= end of config ================================= */
+
+  var DEFAULT_SOURCE = 'creators-page';
+  var KIT_ENDPOINT = 'https://app.kit.com/forms/' + encodeURIComponent(CREATOR_KIT_FORM_ID) + '/subscriptions';
+  var KIT_READY = /^\d+$/.test(String(CREATOR_KIT_FORM_ID));
+  var EMAIL_RE = /^[^\s@]+@[^\s@.]+(\.[^\s@.]+)*\.[A-Za-z]{2,}$/;
+  var HANDLE_RE = /^[A-Za-z0-9._]{1,30}$/;
+
+  function cleanSrc(v) { return String(v || '').toLowerCase().replace(/[^a-z0-9-]/g, '').slice(0, 40); }
+  function cleanHandle(v) {
+    v = String(v || '').trim().replace(/^@+/, '');
+    var m = v.match(/(?:instagram\.com|tiktok\.com)\/@?([A-Za-z0-9._]+)/i); // accept a pasted profile URL
+    return m ? m[1] : v;
+  }
+  function isUrl(v) {
+    try { var u = new URL(v); return (u.protocol === 'https:' || u.protocol === 'http:') && /\./.test(u.hostname); }
+    catch (e) { return false; }
+  }
+
+  var wrap = document.querySelector('[data-cr]');
+  if (!wrap) return;
+  var form = wrap.querySelector('form');
+  var btn = form.querySelector('button[type="submit"]');
+  var srcInput = form.querySelector('input[name="signup_source"]');
+  try { var s = cleanSrc(new URLSearchParams(window.location.search).get('src')); if (s) srcInput.value = s; } catch (e) {}
+
+  function val(name) { var el = form.elements[name]; return el ? String(el.value || '').trim() : ''; }
+  function radio(name) { var el = form.querySelector('input[name="' + name + '"]:checked'); return el ? el.value : ''; }
+  function reelLinks() { return ['reel_1', 'reel_2', 'reel_3'].map(val).filter(Boolean); }
+
+  // Each check returns true when valid.
+  var checks = {
+    name: function () { return val('name').length > 0; },
+    email: function () { return EMAIL_RE.test(val('email')); },
+    instagram: function () { return HANDLE_RE.test(cleanHandle(val('instagram'))); },
+    follower_range: function () { return !!radio('follower_range'); },
+    toronto_based: function () { return !!radio('toronto_based'); },
+    story_side: function () { return !!radio('story_side'); },
+    reel_links: function () { var l = reelLinks(); return l.length > 0 && l.every(isUrl); },
+    rate_cad: function () { return !!radio('rate_cad'); },
+    consent: function () { return form.elements.consent.checked; }
+  };
+
+  function mark(key, ok) {
+    var q = form.querySelector('[data-q="' + key + '"]');
+    if (!q) return;
+    q.classList.toggle('is-invalid', !ok);
+    var field = q.querySelector('.field');
+    if (field && key !== 'reel_links') field.classList.toggle('is-invalid', !ok);
+    if (key === 'reel_links') {
+      Array.prototype.forEach.call(q.querySelectorAll('input'), function (i) {
+        var bad = !ok && (i.value.trim() ? !isUrl(i.value.trim()) : reelLinks().length === 0 && i.name === 'reel_1');
+        i.closest('.field').classList.toggle('is-invalid', bad);
+        i.setAttribute('aria-invalid', bad ? 'true' : 'false');
+      });
+    } else {
+      Array.prototype.forEach.call(q.querySelectorAll('input'), function (i) { i.setAttribute('aria-invalid', ok ? 'false' : 'true'); });
+    }
+    var err = q.querySelector('.err');
+    if (err) err.hidden = ok;
+  }
+
+  var attempted = false;
+  function validate() {
+    var firstBad = null;
+    Object.keys(checks).forEach(function (k) {
+      var ok = checks[k](); mark(k, ok);
+      if (!ok && !firstBad) firstBad = k;
+    });
+    return firstBad;
+  }
+  form.addEventListener('input', function () { if (attempted) validate(); });
+  form.addEventListener('change', function () { if (attempted) validate(); });
+
+  function sendToKit(p) {
+    if (!KIT_READY) {
+      if (window.console && console.warn) console.warn('[HouseTour AI] Creator Kit form not configured (CREATOR_KIT_FORM_ID is a placeholder). ' +
+        'Application NOT sent anywhere; showing the local thank-you state only.', p);
+      return Promise.resolve({ ok: true, local: true });
+    }
+    var body = new URLSearchParams();
+    body.append('email_address', p.email);
+    body.append('fields[first_name]', p.name);
+    Object.keys(CREATOR_FIELDS).forEach(function (k) {
+      if (CREATOR_FIELDS[k]) body.append('fields[' + CREATOR_FIELDS[k] + ']', p[k] || '');
+    });
+    return fetch(KIT_ENDPOINT, { method: 'POST', headers: { 'Accept': 'application/json' }, body: body })
+      .then(function (r) {
+        return r.json().catch(function () { return {}; }).then(function (data) {
+          if (!r.ok) throw new Error('HTTP ' + r.status);
+          if (data && data.status === 'quarantined' && data.url) return { ok: true, confirmUrl: data.url };
+          if (data && data.status && data.status !== 'success') throw new Error('Kit: ' + data.status);
+          return { ok: true };
+        });
+      });
+  }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    attempted = true;
+    form.querySelector('.send-err').hidden = true;
+    var bad = validate();
+    if (bad) {
+      var q = form.querySelector('[data-q="' + bad + '"]');
+      var target = q && q.querySelector('input');
+      if (q) q.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      if (target) target.focus({ preventScroll: true });
+      return;
+    }
+    var payload = {
+      name: val('name'),
+      email: val('email'),
+      instagram: cleanHandle(val('instagram')),
+      tiktok: cleanHandle(val('tiktok')),
+      follower_range: radio('follower_range'),
+      toronto_based: radio('toronto_based'),
+      story_side: radio('story_side'),
+      reel_links: reelLinks().join(' | '),
+      rate_cad: radio('rate_cad'),
+      follows_ig: form.elements.follows_ig.checked ? 'yes' : 'no',
+      signup_source: srcInput.value || DEFAULT_SOURCE
+    };
+    btn.disabled = true; wrap.setAttribute('aria-busy', 'true');
+    sendToKit(payload).then(function (res) {
+      if (res && res.confirmUrl) {
+        var p = wrap.querySelector('.done-p');
+        p.innerHTML = 'One more step: <a href="" target="_blank" rel="noopener">confirm you\'re human</a>.';
+        p.querySelector('a').href = res.confirmUrl;
+      }
+      form.hidden = true;
+      var done = wrap.querySelector('.wl-done');
+      done.hidden = false; wrap.classList.add('is-done');
+      wrap.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      done.focus({ preventScroll: true });
+    }).catch(function () {
+      form.querySelector('.send-err').hidden = false;
+      btn.disabled = false;
+    }).then(function () { wrap.removeAttribute('aria-busy'); });
+  });
+})();
+
+</script>
+</body>
+</html>
