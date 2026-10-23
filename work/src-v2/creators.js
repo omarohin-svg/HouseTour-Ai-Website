@@ -1,36 +1,34 @@
 /* HouseTour AI creators application form -> Kit (formerly ConvertKit).
  * Source of truth: src-v2/creators.js (inlined into dark-v2/creators/index.html and launch/creators/index.html by build.py).
- * Mirrors the homepage waitlist (src-v2/waitlist.js): same public Kit form endpoint, no API key, urlencoded POST.
+ * Same pattern as the live homepage/landlords forms (src-v2/waitlist.js, src-v2/landlords.js): our own HTML form,
+ * public Kit form endpoint, urlencoded POST via fetch, no API key, no Kit embed/template/JS.
  *
- * ======================== KIT CONFIG: Ohin fills this in ========================
- * CREATOR_KIT_FORM_ID  The number of a NEW Kit form just for creator applications (not the waitlist form):
- *                      Kit > Grow > Landing Pages & Forms > (creator form) > Publish > HTML >
- *                      action="https://app.kit.com/forms/<THIS NUMBER>/subscriptions".
- *                      Until this is a real number the page makes NO network calls: the form only shows
- *                      the local thank-you state and logs a console warning.
- *                      In that Kit form's settings, set "Add a tag" / incentive tagging to the tag 'creator'.
+ * ============================== KIT CONFIG ==============================
+ * CREATOR_KIT_FORM_ID  Kit form 'Creator applications' (data-uid b44b82541e):
+ *                      POST https://app.kit.com/forms/10084828/subscriptions
+ *                      No tag is sent from the page (none configured for this form).
  *
  * CREATOR_FIELDS       Kit custom field keys (Kit > Subscribers > Custom fields). Each key must match EXACTLY.
  *                      Set a value to '' to stop sending that answer.
  *
- * Sent: email_address, fields[first_name] (= the Name entered), and the answers below as fields[...].
+ * Sent: email_address, fields[first_name] (Kit standard field = the Name entered), and the answers below as fields[...].
  * ?src= in the page URL (e.g. /creators/?src=story-1) is sanitised to a-z, 0-9, hyphens (max 40 chars)
  * and sent as fields[signup_source]; with no ?src it is 'creators-page'.
  *
  * NO KEYS OF ANY KIND belong here: never paste a Kit API secret or v4 key (kit_...) into this page.
- * ================================================================================
+ * =========================================================================
  */
 (function () {
   'use strict';
 
-  var CREATOR_KIT_FORM_ID = 'TODO_CREATOR_KIT_FORM_ID'; // TODO(kit): numeric ID of the new creator form, e.g. '10123456'
+  var CREATOR_KIT_FORM_ID = '10084828'; // Kit form 'Creator applications' (data-uid b44b82541e)
   var CREATOR_FIELDS = {
     instagram: 'instagram',           // Instagram handle, without the @
     tiktok: 'tiktok',                 // TikTok handle, without the @ ('' if left blank)
     follower_range: 'follower_range', // under-5k | 5k-20k | 20k-50k | 50k-plus
     toronto_based: 'toronto_based',   // yes | no
     story_side: 'story_side',         // renter | landlord | either
-    reel_links: 'reel_links',         // 1-3 URLs joined with ' | '
+    reel_links: 'reel_links',         // the 1-3 Reel links joined into one value with ' | '
     rate_cad: 'rate_cad',             // required rate-per-Reel range: under-150-cad | 150-300-cad | 300-500-cad | 500-plus-cad
     follows_ig: 'follows_ig',         // yes | no (optional checkbox, not a gate)
     signup_source: 'signup_source'    // ?src value, or 'creators-page'
