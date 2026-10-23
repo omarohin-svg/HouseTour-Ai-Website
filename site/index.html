@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>HouseTour AI · Meet Kira, your AI guide for property tours (in development)</title>
-<meta name="description" content="In development · Toronto & GTA. Verified renters tour vacant rentals in person, on your schedule, guided by Kira. Join the waitlist.">
+<title>HouseTour AI · Meet Kira. Simplified rentals and house tours (in development)</title>
+<meta name="description" content="In development · Toronto &amp; GTA. Simplified rentals and house tours for renters and landlords. Verified renters tour in person, on your schedule, with Kira. Join the waitlist.">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon-180.png">
@@ -339,6 +339,104 @@ h2{font-size:58px}
 /* v3 polish: avoid a one-word orphan ("in") in the landlord flow items on narrow screens */
 .flow .it{text-wrap:balance}
 
+/* ---------- v3: two-sided homepage (choice cards, trust row, 4-icon how it works) + shared nav link ---------- */
+.nav-ll{display:none;font-size:14px;font-weight:600;color:var(--text);text-decoration:underline;text-decoration-color:rgba(255,255,255,.3);text-underline-offset:4px}
+.nav-ll:hover{text-decoration-color:var(--kira)}
+.nav-links a[aria-current="page"],.nav-ll[aria-current="page"]{color:var(--text)}
+.nav-ll:focus-visible{outline:2px solid var(--focus-outline);outline-offset:3px;border-radius:4px}
+@media (max-width:1100px){.nav-ll{display:inline-flex}}
+
+.hero3 h1{font-size:88px;margin:24px 0 18px;letter-spacing:-.045em}
+.hero3 .sub{font-size:21px;line-height:1.5;color:var(--text);max-width:540px}
+.hero3 .sub2{margin-top:8px;font-size:17px;line-height:1.5;color:var(--muted);max-width:540px}
+.choose{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:32px;max-width:560px}
+.ch{position:relative;display:flex;flex-direction:column;align-items:flex-start;min-height:152px;padding:20px 20px 18px;border-radius:24px;border:1px solid var(--line);transition:transform .15s ease,filter .15s ease}
+.ch:hover{transform:translateY(-2px)}
+.ch .ic{width:44px;height:44px;border-radius:14px;display:grid;place-items:center}
+.ch b{margin-top:auto;padding-top:18px;font-family:"Sora",sans-serif;font-size:19px;font-weight:600;letter-spacing:-.02em;line-height:1.2}
+.ch small{margin-top:4px;font-size:14px;line-height:1.4}
+.ch .go{position:absolute;top:22px;right:20px}
+.ch-rent{background:var(--btn-bg);color:var(--btn-text);border-color:transparent;box-shadow:var(--btn-shadow)}
+.ch-rent .ic{background:rgba(3,17,31,.14)}
+.ch-rent small{color:rgba(3,17,31,.78)}
+.ch-own{background:var(--card-hi);border-color:var(--line-hi);color:var(--text);box-shadow:var(--tag-shadow)}
+.ch-own .ic{background:var(--ic-bg);color:var(--kira-hi)}
+.ch-own small{color:var(--muted)}
+.ch-own .go{color:var(--kira)}
+.ch:focus-visible{outline:2px solid var(--focus-outline);outline-offset:3px}
+.trust{list-style:none;display:flex;flex-wrap:wrap;gap:10px 22px;margin:22px 0 0;padding:0;font-size:14.5px;font-weight:600;color:var(--text)}
+.trust li{display:flex;align-items:center;gap:7px}
+.trust svg{color:var(--kira)}
+
+.how3{padding:40px 0 120px;text-align:center}
+.how3 h2{font-size:40px}
+.icons5{list-style:none;margin:40px auto 0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:16px;max-width:980px;position:relative}
+.icons5::before{content:"";position:absolute;left:10%;right:10%;top:36px;height:1px;background:linear-gradient(90deg,transparent,var(--kira),transparent);opacity:.5}
+.icons5 li{position:relative;display:flex;flex-direction:column;align-items:center;gap:14px}
+.icons5 .ic{width:72px;height:72px;border-radius:22px;display:grid;place-items:center;background:var(--panel);border:1px solid var(--line-hi);color:var(--kira-hi);box-shadow:var(--ic-glow)}
+.icons5 b{font-family:"Sora",sans-serif;font-size:16px;font-weight:600;letter-spacing:-.01em;line-height:1.25}
+
+.ll-band{padding:0 0 40px}
+.ll-link{display:flex;align-items:center;gap:16px;max-width:620px;margin:0 auto;padding:18px 22px;border-radius:20px;background:var(--glass);border:1px solid var(--line);box-shadow:var(--tag-shadow);font-size:16px;color:var(--muted)}
+.ll-link b{color:var(--text);font-weight:600}
+.ll-link .ic{flex:none;width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:var(--ic-bg);color:var(--kira)}
+.ll-link .go{margin-left:auto;flex:none;color:var(--kira)}
+.ll-link:hover{border-color:var(--line-hi)}
+.ll-link:focus-visible{outline:2px solid var(--focus-outline);outline-offset:3px}
+
+@media (max-width:1100px){.hero3 h1{font-size:68px}}
+@media (max-width:760px){
+  .hero3 .hero-copy{text-align:center}
+  .hero3 .eyebrow{margin-top:0}
+  .hero3 h1{font-size:54px;margin:14px 0 12px}
+  .hero3 .sub{font-size:18px;margin:0 auto}
+  .hero3 .sub2{font-size:15.5px;margin:6px auto 0}
+  .choose{gap:10px;margin-top:24px}
+  .ch{min-height:138px;padding:16px 14px 14px;border-radius:20px;text-align:left}
+  .ch .ic{width:40px;height:40px;border-radius:12px}
+  .ch b{font-size:17px;padding-top:14px}
+  .ch small{font-size:13px}
+  .ch .go{top:18px;right:14px}
+  .trust{justify-content:center;gap:8px 16px;font-size:13.5px;margin-top:18px}
+  .how3{padding:24px 0 72px}
+  .how3 h2{font-size:28px}
+  .icons5{gap:8px;margin-top:24px}
+  .icons5::before{top:28px}
+  .icons5 .ic{width:56px;height:56px;border-radius:17px}
+  .icons5 .ic svg{width:22px;height:22px}
+  .icons5 b{font-size:13px}
+  .ll-band{padding:0 0 24px}
+  .ll-link{padding:14px 16px;font-size:14.5px;gap:12px}
+}
+
+/* v3: renter flow (homepage #renters) */
+.rent3 .wrap{align-items:start}
+.rent3 .visual{position:sticky;top:40px}
+.rsteps{list-style:none;margin:28px 0 0;padding:0;display:grid;gap:8px;max-width:560px}
+.rsteps li{display:flex;align-items:flex-start;gap:14px;padding:14px 16px;border-radius:16px;background:var(--card);border:1px solid var(--line)}
+.rsteps li:last-child{background:var(--card-hi);border-color:var(--line-hi)}
+.rsteps li.opt-step{border-style:dashed}
+.rsteps .n{flex:none;width:28px;height:28px;border-radius:9px;display:grid;place-items:center;background:var(--ic-bg);color:var(--kira-hi);font-family:"Sora",sans-serif;font-size:13px;font-weight:600}
+.rsteps b{display:block;font-size:16px;font-weight:600;line-height:1.35;color:var(--text);padding-top:3px}
+.rsteps span:not(.n):not(.opt):not(.chips-sm){display:block;margin-top:2px;font-size:14.5px;line-height:1.5;color:var(--muted)}
+.rsteps .opt{display:inline-block;margin-left:6px;padding:1px 8px;border-radius:999px;border:1px solid var(--line-hi);font-size:11.5px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--kira-text);vertical-align:2px}
+@media (max-width:760px){
+  .icons5{gap:4px}
+  .icons5 b{font-size:12px}
+  .icons5 .ic{width:52px;height:52px;border-radius:16px}
+  .rent3 .visual{display:none}
+  .rsteps{margin-top:20px;gap:6px}
+  .rsteps li{padding:12px 12px;gap:12px}
+  .rsteps b{font-size:15px}
+  .rsteps span:not(.n):not(.opt):not(.chips-sm){font-size:13.5px}
+}
+.rsteps .chips-sm{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 6px}
+.rsteps .chips-sm i{font-style:normal;padding:4px 10px;border-radius:999px;background:var(--glass);border:1px solid var(--line);font-size:12.5px;font-weight:500;color:var(--text);white-space:nowrap}
+/* wording cut: standalone Kira "ask" block */
+.ask3{padding:20px 0 90px}
+.ask3 .ask{width:100%;max-width:640px;margin:0 auto}
+@media (max-width:760px){.ask3{padding:8px 0 56px}.ask3 .ask img{width:96px}}
+
 </style>
 </head>
 <body>
@@ -360,6 +458,11 @@ h2{font-size:58px}
     <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-6.5-5.8-6.5-11a6.5 6.5 0 0 1 13 0c0 5.2-6.5 11-6.5 11Z"/><circle cx="12" cy="10" r="2.3"/></symbol>
     <symbol id="i-alert" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5.5M12 16.4v.1"/></symbol>
     <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.5V12l3 2"/></symbol>
+    <symbol id="i-id" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="19" height="14" rx="3"/><circle cx="8.5" cy="11" r="2.2"/><path d="M5.3 16c.6-1.6 1.8-2.4 3.2-2.4s2.6.8 3.2 2.4M14.5 10h4M14.5 13.5h3"/></symbol>
+    <symbol id="i-door" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 21V4.5A1.5 1.5 0 0 1 7.5 3h9A1.5 1.5 0 0 1 18 4.5V21M3.5 21h17"/><path d="M14.5 12.5v.01"/></symbol>
+    <symbol id="i-key" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="15" r="4.5"/><path d="m11.2 11.8 8.3-8.3M16.5 6.5l2.5 2.5M14 9l2 2"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 11.5c0 4.1-3.8 7.5-8.5 7.5-1.2 0-2.3-.2-3.3-.6L4 20l1.2-3.6C4.1 15 3.5 13.3 3.5 11.5 3.5 7.4 7.3 4 12 4s8.5 3.4 8.5 7.5Z"/><path d="M8.5 11.5h.01M12 11.5h.01M15.5 11.5h.01"/></symbol>
   </defs>
 </svg>
 
@@ -369,112 +472,69 @@ h2{font-size:58px}
     <nav class="nav-links" aria-label="Primary">
       <a href="#how">How it works</a>
       <a href="#renters">Renters</a>
-      <a href="#landlords">Landlords &amp; operators</a>
+      <a href="landlords/">For landlords</a>
     </nav>
     <div class="nav-right">
+      <a class="nav-ll" href="landlords/">For landlords</a>
       <span class="pill"><span class="dot"></span>In development</span>
-      <a class="btn-sm js-join" href="#wl-hero"><span class="lg">Join the waitlist</span><span class="sm">Join</span></a>
+      <a class="btn-sm js-join" href="#join"><span class="lg">Join the waitlist</span><span class="sm">Join</span></a>
     </div>
   </div>
 </header>
 
 <main id="top">
-  <section class="hero">
+  <section class="hero hero3">
     <div class="grid"></div>
     <div class="wrap">
       <div class="hero-copy">
         <span class="pill eyebrow"><span class="dot"></span>In development <span class="sep">·</span> Toronto &amp; GTA</span>
-        <h1>Meet <span class="k">Kira.</span><br>Your AI guide for property tours.</h1>
-        <p class="sub">Verified renters tour vacant rentals in person, <strong>on your schedule</strong>. Kira greets you, guides you through the home, and answers your questions on the spot.</p>
-        <div class="wl" id="wl-hero" data-wl data-source="hero">
-          <form class="wl-form" action="#" method="post" novalidate aria-label="Join the waitlist">
-            <fieldset class="seg">
-              <legend class="sr">I am a</legend>
-              <label><input type="radio" name="role" value="renter" checked><svg width="16" height="16" aria-hidden="true"><use href="#i-user"/></svg>I'm a renter</label>
-              <label><input type="radio" name="role" value="landlord_operator"><svg width="16" height="16" aria-hidden="true"><use href="#i-bldg"/></svg>I'm a landlord or operator</label>
-            </fieldset>
-            <div class="row">
-              <label class="field"><svg width="18" height="18" aria-hidden="true"><use href="#i-mail"/></svg><span class="sr">Email address</span><input id="email-hero" type="email" name="email" placeholder="you@email.com" autocomplete="email" inputmode="email" aria-describedby="err-hero"></label>
-              <p class="err" id="err-hero" role="alert" hidden><svg width="16" height="16" aria-hidden="true"><use href="#i-alert"/></svg>Please enter a valid email.</p>
-              <button class="btn" type="submit">Join the waitlist<svg width="18" height="18" aria-hidden="true"><use href="#i-arrow"/></svg></button>
-              <p class="err send-err" id="send-err-hero" role="alert" hidden><svg width="16" height="16" aria-hidden="true"><use href="#i-alert"/></svg>Something went wrong. Please try again.</p>
-            </div>
-            <p class="micro"><svg width="14" height="14" aria-hidden="true"><use href="#i-spark"/></svg><span>Early access in Toronto &amp; GTA. By joining, you agree to get email updates from HouseTour AI (Charter Residential). Unsubscribe anytime.</span></p>
-          </form>
-          <div class="wl-done" role="status" tabindex="-1" hidden>
-            <span class="done-ic"><svg width="24" height="24" aria-hidden="true"><use href="#i-check"/></svg></span>
-            <div><p class="done-h">You're on the list.</p><p class="done-p">Follow the build <b>@housetourai</b>.</p></div>
-          </div>
+        <h1>Meet <span class="k">Kira.</span></h1>
+        <p class="sub">Simplified rentals and house tours for renters and landlords.</p>
+        <p class="sub2">Tour on your schedule. No landlord needed on site.</p>
+        <div class="choose">
+          <a class="ch ch-rent" href="#join" data-role="renter"><span class="ic"><svg width="22" height="22" aria-hidden="true"><use href="#i-search"/></svg></span><b>I'm renting</b><small>Find and tour homes</small><svg class="go" width="20" height="20" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <a class="ch ch-own" href="landlords/"><span class="ic"><svg width="22" height="22" aria-hidden="true"><use href="#i-key"/></svg></span><b>I own or manage rentals</b><small>For landlords and property managers</small><svg class="go" width="20" height="20" aria-hidden="true"><use href="#i-arrow"/></svg></a>
         </div>
-
+        <ul class="trust">
+          <li><svg width="18" height="18" aria-hidden="true"><use href="#i-check"/></svg>ID verified</li>
+          <li><svg width="18" height="18" aria-hidden="true"><use href="#i-check"/></svg>You approve</li>
+          <li><svg width="18" height="18" aria-hidden="true"><use href="#i-check"/></svg>Kira answers</li>
+        </ul>
       </div>
       <div class="stage" aria-hidden="false">
         <div class="ring r3"></div><div class="ring r2"></div><div class="halo"></div><div class="ring r1"></div>
         <div class="floor"></div>
         <img class="kira" src="assets/kira.png" alt="Kira, the HouseTour AI guide: a white glossy sphere with a black visor and a glowing blue smile" width="1200" height="1200">
         <div class="tag t1"><span class="ic"><svg width="18" height="18"><use href="#i-shield"/></svg></span><span><small>Before every tour</small>Renter verified</span></div>
-        <div class="tag t2"><span class="ic"><svg width="18" height="18"><use href="#i-orb"/></svg></span><span><small>Ask Kira anything</small>Rent, utilities, the neighbourhood</span></div>
       </div>
     </div>
   </section>
 
-  <section class="sec how" id="how">
+  <section class="how3" id="how">
     <div class="wrap">
-      <div class="head">
-        <div><span class="label">How it works</span><h2>Four steps to the front door.</h2></div>
-      </div>
-      <ol class="steps">
-        <li class="step"><span class="n">01</span><span class="ic"><svg width="24" height="24"><use href="#i-home"/></svg></span><h3>Select a home</h3><p>Choose a vacant rental in Toronto &amp; GTA.</p></li>
-        <li class="step"><span class="n">02</span><span class="ic"><svg width="24" height="24"><use href="#i-shield"/></svg></span><h3>Get verified</h3><p>Only verified renters get in.</p></li>
-        <li class="step"><span class="n">03</span><span class="ic"><svg width="24" height="24"><use href="#i-cal"/></svg></span><h3>Book a time</h3><p>Tour when it works for you.</p></li>
-        <li class="step last"><span class="n">04</span><span class="ic"><svg width="24" height="24"><use href="#i-orb"/></svg></span><h3>Tour with Kira</h3><p>In person. Kira guides you and answers on the spot.</p></li>
+      <h2>How it works</h2>
+      <ol class="icons5">
+        <li><span class="ic"><svg width="26" height="26" aria-hidden="true"><use href="#i-home"/></svg></span><b>Pick a home</b></li>
+        <li><span class="ic"><svg width="26" height="26" aria-hidden="true"><use href="#i-id"/></svg></span><b>Verify ID</b></li>
+        <li><span class="ic"><svg width="26" height="26" aria-hidden="true"><use href="#i-user"/></svg></span><b>About you</b></li>
+        <li><span class="ic"><svg width="26" height="26" aria-hidden="true"><use href="#i-check"/></svg></span><b>Get approved</b></li>
+        <li><span class="ic"><svg width="26" height="26" aria-hidden="true"><use href="#i-orb"/></svg></span><b>Tour with Kira</b></li>
       </ol>
     </div>
   </section>
 
-  <section class="sec split" id="renters">
+  <section class="ask3" id="renters">
     <div class="wrap">
-      <div class="copy">
-        <span class="label">For renters</span>
-        <h2>Tour when it works for you.</h2>
-        <p class="lead">Ask anything: rent, utilities, the neighbourhood. No waiting days for a showing.</p>
-      </div>
-      <div class="visual">
-        <div class="ask">
-          <img src="assets/kira.png" alt="" width="150" height="150">
-          <span class="q">Ask anything</span>
-          <div class="chips">
-            <span class="chip"><svg width="18" height="18"><use href="#i-dollar"/></svg>Rent</span>
-            <span class="chip"><svg width="18" height="18"><use href="#i-bolt"/></svg>Utilities</span>
-            <span class="chip"><svg width="18" height="18"><use href="#i-pin"/></svg>The neighbourhood</span>
-          </div>
+      <div class="ask">
+        <img src="assets/kira.png" alt="" width="150" height="150">
+        <span class="q">Ask Kira anything</span>
+        <div class="chips">
+          <span class="chip"><svg width="18" height="18"><use href="#i-dollar"/></svg>Rent</span>
+          <span class="chip"><svg width="18" height="18"><use href="#i-bolt"/></svg>Utilities</span>
+          <span class="chip"><svg width="18" height="18"><use href="#i-pin"/></svg>The neighbourhood</span>
         </div>
       </div>
     </div>
-  </section>
-
-  <section class="sec split flip" id="landlords">
-    <div class="wrap">
-      <div class="copy">
-        <span class="label">For landlords &amp; operators</span>
-        <h2>Stop driving across the GTA to repeat the same answers.</h2>
-        <p class="lead">Upload your listing once; Kira handles the viewing. Only verified renters get in.</p>
-      </div>
-      <div class="visual">
-        <div class="flow">
-          <div class="it"><span class="ic"><svg width="20" height="20"><use href="#i-upload"/></svg></span>Upload your listing once<svg class="ok" width="22" height="22"><use href="#i-check"/></svg></div>
-          <div class="conn"></div>
-          <div class="it"><span class="ic"><svg width="20" height="20"><use href="#i-shield"/></svg></span>Only verified renters get in<svg class="ok" width="22" height="22"><use href="#i-check"/></svg></div>
-          <div class="conn"></div>
-          <div class="it k"><img src="assets/kira.png" alt="" width="44" height="44">Kira handles the viewing<svg class="ok" width="22" height="22"><use href="#i-check"/></svg></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="tagline">
-    <img class="eye" src="assets/kira.png" alt="" width="76" height="76">
-    <div class="wrap"><h2>Every Property<br>Has a <span class="v">Voice.</span></h2></div>
   </section>
 
   <section class="join" id="join">
@@ -487,7 +547,7 @@ h2{font-size:58px}
             <fieldset class="seg">
               <legend class="sr">I am a</legend>
               <label><input type="radio" name="role" value="renter" checked><svg width="16" height="16" aria-hidden="true"><use href="#i-user"/></svg>I'm a renter</label>
-              <label><input type="radio" name="role" value="landlord_operator"><svg width="16" height="16" aria-hidden="true"><use href="#i-bldg"/></svg>I'm a landlord or operator</label>
+              <label><input type="radio" name="role" value="landlord_operator"><svg width="16" height="16" aria-hidden="true"><use href="#i-bldg"/></svg>I own or manage rentals</label>
             </fieldset>
             <div class="row">
               <label class="field"><svg width="18" height="18" aria-hidden="true"><use href="#i-mail"/></svg><span class="sr">Email address</span><input id="email-join" type="email" name="email" placeholder="you@email.com" autocomplete="email" inputmode="email" aria-describedby="err-join"></label>
@@ -684,15 +744,28 @@ h2{font-size:58px}
     });
   });
 
-  // Nav "Join" button: smooth-scroll to the hero form and focus its email field.
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // 'I'm renting' choice card: make sure the renter role is selected on the waitlist form, then scroll there.
+  Array.prototype.forEach.call(document.querySelectorAll('[data-role="renter"]'), function (a) {
+    a.addEventListener('click', function (e) {
+      var wrap = document.getElementById('wl-join');
+      if (!wrap) return;
+      e.preventDefault();
+      var r = wrap.querySelector('input[name="role"][value="renter"]'); if (r) r.checked = true;
+      wrap.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'center' });
+      var target = wrap.classList.contains('is-done') ? wrap.querySelector('.wl-done') : document.getElementById('email-join');
+      if (target) target.focus({ preventScroll: true });
+    });
+  });
+
+  // Nav "Join" button: smooth-scroll to the waitlist form and focus its email field.
   Array.prototype.forEach.call(document.querySelectorAll('.js-join'), function (a) {
     a.addEventListener('click', function (e) {
-      var wrap = document.getElementById('wl-hero');
+      var wrap = document.getElementById('wl-join');
       if (!wrap) return;
       e.preventDefault();
       wrap.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'center' });
-      var target = wrap.classList.contains('is-done') ? wrap.querySelector('.wl-done') : document.getElementById('email-hero');
+      var target = wrap.classList.contains('is-done') ? wrap.querySelector('.wl-done') : document.getElementById('email-join');
       if (target) target.focus({ preventScroll: true });
     });
   });

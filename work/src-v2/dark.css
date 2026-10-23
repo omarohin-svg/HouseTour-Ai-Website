@@ -1,0 +1,31 @@
+:root{
+  --bg:#04060D; --text:#F3F6FB; --muted:#93A0B4; --placeholder:#5E6A7E;
+  --kira:#359AE7; --kira-hi:#7BECFD; --kira-deep:#0253BB; --kira-text:#6CC2F5; --brand-ai:#59B4F0;
+  --line:rgba(255,255,255,.08); --line-hi:rgba(53,154,231,.38);
+  --pill-line:rgba(53,154,231,.32); --pill-bg:rgba(53,154,231,.08); --dot-ring:rgba(53,154,231,.18);
+  --btn-bg:linear-gradient(180deg,#5AB2F0 0%,#359AE7 55%,#2286D8 100%); --btn-text:#03111F;
+  --btn-shadow:0 0 0 1px rgba(123,236,253,.35) inset,0 10px 30px -8px rgba(53,154,231,.75),0 0 60px -10px rgba(53,154,231,.6);
+  --k-grad:linear-gradient(100deg,#9BEFFF 0%,#59B4F0 45%,#359AE7 100%);
+  --halo:radial-gradient(closest-side,rgba(53,154,231,.42),rgba(53,154,231,.12) 55%,rgba(53,154,231,0) 100%);
+  --ring:rgba(123,200,245,.16);
+  --floor:radial-gradient(closest-side,rgba(53,154,231,.85),rgba(53,154,231,0));
+  --kira-filter:drop-shadow(0 0 40px rgba(53,154,231,.45)) drop-shadow(0 30px 60px rgba(0,0,0,.6));
+  --kira-filter-sm:drop-shadow(0 0 24px rgba(53,154,231,.55));
+  --glass:rgba(16,22,36,.62); --tag-shadow:0 20px 40px -20px rgba(0,0,0,.8); --ic-bg:rgba(53,154,231,.14); --ic-glow:0 0 30px -6px rgba(53,154,231,.6);
+  --card:rgba(255,255,255,.035); --card-hi:linear-gradient(180deg,rgba(53,154,231,.16),rgba(53,154,231,.04)); --card-shadow:0 40px 80px -40px rgba(0,0,0,.9),0 0 0 1px rgba(255,255,255,.02) inset;
+  --seg-bg:rgba(255,255,255,.04); --seg-on:rgba(53,154,231,.18); --seg-shadow:0 0 0 1px rgba(53,154,231,.45) inset;
+  --input-bg:rgba(0,0,0,.35); --input-line:rgba(255,255,255,.09); --focus:rgba(53,154,231,.25);
+  --panel:linear-gradient(180deg,#0A1020 0%,#060912 100%);
+  --panel-glow:radial-gradient(60% 55% at 50% 45%,rgba(53,154,231,.20),rgba(53,154,231,0));
+  --panel-glow-top:radial-gradient(closest-side,rgba(53,154,231,.30),rgba(53,154,231,0));
+  --tag-glow:radial-gradient(closest-side,rgba(53,154,231,.22),rgba(53,154,231,0));
+}
+.hero::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background:
+    radial-gradient(900px 700px at 74% 46%,rgba(53,154,231,.20),rgba(53,154,231,0) 70%),
+    radial-gradient(1200px 500px at 50% 0%,rgba(40,70,130,.18),rgba(0,0,0,0) 70%);}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:linear-gradient(90deg,transparent,rgba(53,154,231,.45),transparent)}
+.hero .grid{position:absolute;inset:0;pointer-events:none;opacity:.5;
+  background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);
+  background-size:80px 80px;-webkit-mask-image:radial-gradient(700px 520px at 74% 48%,#000,transparent 75%);mask-image:radial-gradient(700px 520px at 74% 48%,#000,transparent 75%)}
+.tagline{background:none}
